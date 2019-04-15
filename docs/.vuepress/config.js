@@ -1,22 +1,22 @@
 module.exports = {
-    title: "VuePressBlog",
-    description: "test",
+    title: "SALARY LUPINE",
+    description: "Salary Lupine's log",
     themeConfig: {
         nav: [
             {
-                text: 'Blog',
-                link: '/blog/'
+                text: 'Home',
+                link: '/'
             },
             {
-                text: 'TECH',
+                text: 'Tech',
                 link: '/tech/'
             },
             {
-                text: 'ENGLISH',
+                text: 'English',
                 link: '/english/'
             },
             {
-                text: 'ABOUT',
+                text: 'About',
                 link: '/about/'
             }
         ]

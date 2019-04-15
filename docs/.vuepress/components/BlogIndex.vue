@@ -22,6 +22,7 @@
 
 <script>
 export default {
+    props: [''],
     computed: {
         posts () {
             console.log(this)
