@@ -1,10 +1,10 @@
 <template>
     <div>
-        <!-- <div v-for="post in posts">
+        <div v-for="post in posts">
             <h2>
-                <router-lik :to="post.path">
+                <router-link :to="post.path">
                     {{ post.frontmatter.title }}
-                </router-lik>
+                </router-link>
             </h2>
 
             <p>
@@ -16,7 +16,7 @@
                     Read more
                 </router-link>
             </p>
-        </div> -->
+        </div>
     </div>
 </template>
 
@@ -25,8 +25,8 @@ export default {
     computed: {
         posts () {
             console.log(this)
-            // return this.$site.pages.filter(page => page.path.startsWith('/blog/') && 
-            // !page.frontmatter.blog_index).sort((a, b) => new Date(b.frontmatter.date) - new Date(a.frontmatter.date))
+            return this.$site.pages.filter(page => page.path.startsWith('/blog/') && 
+            !page.frontmatter.blog_index).sort((a, b) => new Date(b.frontmatter.date) - new Date(a.frontmatter.date))
         }
     }
 }
