@@ -1,10 +1,8 @@
 #!/usr/bin/env sh
 DATE=`date`
 set -e
-# build 
+rm -rf docs/.vuepress/dist/ 
 npm run build
-
-# move deploy file 
 cd docs/.vuepress/dist/ 
 echo 'blog.devstory.kr' > CNAME
 git init 
