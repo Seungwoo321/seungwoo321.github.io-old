@@ -8,8 +8,8 @@ module.exports = {
                 link: '/'
             },
             {
-                text: 'Tech',
-                link: '/tech/'
+                text: 'Project',
+                link: '/project/'
             },
             {
                 text: 'English',
