@@ -1,22 +1,14 @@
 #!/usr/bin/env sh
-
+DATE=`date`
 set -e
 # build 
-npm run docs:build
+npm run build
 
 # move deploy file 
 cd docs/.vuepress/dist/ 
-mv * ../../../../Seungwoo321.github.io
-cd ../../../../Seungwoo321.github.io
-
-# if you are deploying to a custom domain
 echo 'blog.devstory.kr' > CNAME
-
-# commit 
-DATE=`date`
+git init 
+git remote add origin https://github.com/Seungwoo321/Seungwoo321.github.io.git
 git add -A
 git commit -m "deploy $DATE"
-
-
-# push
-git push -u origin master
+git push -f origin master 
