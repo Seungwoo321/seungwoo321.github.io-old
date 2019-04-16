@@ -10,6 +10,12 @@ module.exports = {
             {
                 text: 'Project',
                 link: '/project/'
+                // items: [
+                //     {
+                //         text: 'Environment',
+                //         link: '/project/environment/'
+                //     }
+                // ]
             },
             {
                 text: 'English',
@@ -19,6 +25,11 @@ module.exports = {
                 text: 'About',
                 link: '/about/'
             }
-        ]
+        ],
+        sidebar: {
+            '/project/environment/': [
+                ''
+            ]
+        }
     }
 }
