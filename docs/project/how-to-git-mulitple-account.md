@@ -40,7 +40,7 @@ $
 ```bash
 $ cd <Project Directory> 
 $ touch .git/.git-credentials
-$ git config credential.helper 'store --file=/.git/.git-credentials' 
+$ git config credential.helper 'store --file=./.git/.git-credentials' 
 ```
 
 ### 3. 인증정보 저장하기  
