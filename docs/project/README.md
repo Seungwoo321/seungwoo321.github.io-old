@@ -3,4 +3,4 @@ blog_index: true
 ---
 #VuePressBlog
 
-<BlogIndex />
+<BlogIndex :category="'project'" />

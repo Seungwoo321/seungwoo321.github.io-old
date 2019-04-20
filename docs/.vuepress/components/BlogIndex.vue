@@ -22,11 +22,12 @@
 
 <script>
 export default {
-    props: [''],
+    props: ['category'],
     computed: {
         posts () {
             console.log(this)
-            return this.$site.pages.filter(page => page.path.startsWith('/blog/') && 
+            console.log(this.$site.pages)
+            return this.$site.pages.filter(page => page.path.startsWith(`/${this.category}/`) && 
             !page.frontmatter.blog_index).sort((a, b) => new Date(b.frontmatter.date) - new Date(a.frontmatter.date))
         }
     }
