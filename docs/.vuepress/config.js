@@ -1,6 +1,6 @@
 module.exports = {
-    title: "SALARY LUPINE",
-    description: "Salary Lupine's log",
+    title: "blog.devstory.kr",
+    description: "blog.devstory.kr",
     themeConfig: {
         nav: [
             {
@@ -8,8 +8,8 @@ module.exports = {
                 link: '/'
             },
             {
-                text: 'Project',
-                link: '/project/'
+                text: 'Dev',
+                link: '/dev/'
                 // items: [
                 //     {
                 //         text: 'Environment',
@@ -26,10 +26,10 @@ module.exports = {
                 link: '/about/'
             }
         ],
-        sidebar: {
-            '/project/environment/': [
-                ''
-            ]
-        }
+        // sidebar: {
+        //     '/project/environment': [
+        //         ''
+        //     ]
+        // }
     }
 }

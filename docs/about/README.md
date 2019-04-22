@@ -1,6 +1,6 @@
 # About Me
 
-## Salary Lupine
+## Seungwoo Lee
  Web frontend developer
 
 ## Works
@@ -9,8 +9,7 @@
 - Megazone Cloud
 
 ## Personal Project
- - test1
- - test2
+ - ...
 
  ## Social
 - seungwoo321@gmail.com 
