@@ -98,27 +98,27 @@ Vue Cli3 로 생성한 프로젝트는 기본적으로 `src/` 에 대해 `@/` �
 ```
 
 #### vue peek
-또한 자바스크립트의 `import` 구문에서 `.vue`, `.js` 의 확장자를 생략 할 수 있는데, `.vue` 파일에서는 `.vue` 확장자를 생략한 `import` 구문에서 VSCode의 Intellisense 가 동작 하지않는다. 이 부분은 `vue peek` 플러그인을 설치 하여 해결 할 수 있다. 마찬가지로 자바스크립트 파일에서는 `.vue` 파일에 대한 Intellisense 가 활성화 되지 않는데, 아직까지 해결 방법을 찾지 못 했다.
+자바스크립트의 문법상으로 `import` 구문에서 `.vue`, `.js` 의 확장자를 생략 할 수 있다. `.vue` 파일에서 `@/` aslis 를 사용은 가능하지만, `.vue` 확장자를 생략한 `import` 구문은 VSCode의 Intellisense 가 동작 하지않는다. 이 부분은 `vue peek` 플러그인을 설치 하면 해결 할 수 있다. 마찬가지로 자바스크립트 파일에서도 `.vue` 파일에 대한 Intellisense 가 활성화 되지 않는데, 아직까지 해결 방법을 찾지 못 했다.
 
 
 ## 정리하면
-ESLint는 기본적으로 Standard 스타일에 Indent는 스페이스바 4칸으로 규칙을 변경한 커스텀 룰을 사용한다. VSCode의 Intellisense는 자바스크립트 파일에서 `.vue` 파일의 `import` 구문에서는 활성화 되지 않고, 그 외에는 `@/` alias 사용하고 `.js` 및 `.vue` 의 확장자를 생략한 어느 `import` 구문에서도 VSCode 의 Path Intellisense 가 정상 작동한다.
+ESLint는 기본적으로 Standard 스타일에 Indent는 스페이스바 4칸으로 규칙을 변경한 커스텀 룰을 사용한다. VSCode의 Intellisense는 자바스크립트 파일에서 `.vue` 파일의 `import` 구문에서는 활성화 되지 않고, 그 외에는 `@/` alias 사용하고 `.js` 및 `.vue` 의 확장자를 생략한 어느 `import` 구문에서도 VSCode 의 Path Intellisense 가 정상 작동한다. 
 
 
-## 기타 유용한 플러그인 설치 목록 
-Git 관련 
-- GitLens 
-- GitHistory 
-테마 관련 
-- Material Icon Theme
-- Material Syntax - Dark 
-스타일 작업 관련
-- Color Picker 
-- Sass
-- stylelint
-기타 플러그인 
-- Atom Keymap 
-- Korean Language Pack for Visual Studio Code 
+## 기타 플러그인 설치 목록(선택)
+* Git 관련 
+    - GitLens 
+    - GitHistory 
+* 테마 관련 
+    - Material Icon Theme
+    - Material Syntax - Dark 
+* 스타일 작업 관련
+    - Color Picker 
+    - Sass
+    - stylelint
+* 기타 플러그인 
+    - Atom Keymap 
+    - Korean Language Pack for Visual Studio Code 
 
 ## 참조링크
 
