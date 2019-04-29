@@ -25,6 +25,11 @@ Vue CLI 3 로 구성한 프로젝트가 VSCode 에서 Eslint 및 Intellisense �
 ## 상세 
 ---
 
+### 작업 폴더 열기
+VSCode의 Intellisense 를 활성화 하기 위해 작업영역의 "폴더 추가"는 프로젝트 디렉토리를 직접 선택한다.
+
+### 플러그인 설치 
+
 VSCode 에서 ESLint 와 Intellisense 활성화 하기 위해 아래 플러그인을 설치한다.
 
     - ESLint 
@@ -56,7 +61,7 @@ module.exports = {
 ```
 
 #### setting.json
-VSCode 의 `setting.json` 에 다음 커스텀 설정을 추가한다 
+vue 파일에서도 eslint 를 실행하기 위해 VSCode 의 `setting.json` 에 다음 커스텀 설정을 추가한다 
 ```json
 {
     "eslint.alwaysShowStatus": true,
@@ -76,6 +81,14 @@ VSCode 의 `setting.json` 에 다음 커스텀 설정을 추가한다
             ".js"
         ]
     }
+}
+```
+
+플러그인 Vetur 0.19.2 버전에서는 구문오류를 방지하기 위해 VSCode의 `setting.json` 에 다음 커스텀 설정을 추가한다  
+
+```json 
+{
+    "vetur.experimental.templateInterpolationService": false
 }
 ```
 
