@@ -13,6 +13,7 @@ Vue CLI 3 로 구성한 프로젝트가 VSCode 에서 Eslint 및 Intellisense �
 
 
 ## 요약
+---
 1. VSCode 플러그인 ESLint, TSLint Vue, Vetur, vue peek 을 설치한다 
 2. `vue create <PROJECT NAME>` 으로 프로젝트를 생성할 때 `ESLint + Standard config` 옵션을 선택한다
 3. 프로젝트 루트의 `.eslintrc.js` 의 설정을 수정한다
@@ -32,7 +33,7 @@ VSCode 에서 ESLint 와 Intellisense 활성화 하기 위해 아래 플러그�
     - vue peek 
 
 #### .eslintrc.js
-vue-cli3 명령어인 `vue create <PROJECT_NAME>` 로 프로젝트를 생성 하는 중에 ESLint 에 대한 부분을 설정 하면 프로젝트 루트에 .eslintrc.js 가 만들어진다. 여기에서는 `ESLint + Standard config` 를 선택 하였고 Indent만 기본 설정에서 스페이스바 4칸으로 변경하여 사용하고 있다.
+vue-cli3 명령어인 `vue create <PROJECT_NAME>` 로 프로젝트를 생성 하는 중에 ESLint 에 대한 부분을 설정 하면 프로젝트 루트에 .eslintrc.js 가 만들어진다. 여기에서는 `ESLint + Standard config` 를 선택 하였고 Indent만 기본 설정에서 스페이스바 4칸으로 변경하여 사용한다.
 
 ```js
 module.exports = {
@@ -55,7 +56,7 @@ module.exports = {
 ```
 
 #### setting.json
-또한 추가적으로 VSCode 의 `setting.json` 에 다음 커스텀 설정을 추가한다 
+VSCode 의 `setting.json` 에 다음 커스텀 설정을 추가한다 
 ```json
 {
     "eslint.alwaysShowStatus": true,
@@ -79,7 +80,7 @@ module.exports = {
 ```
 
 #### jsconfig.json
-Vue Cli3 로 생성한 프로젝트는 기본적으로 `src/` 에 대해 `@/` 가 alias 로 설정되어 있어서, `import` 구문에서 `@/` 를 사용 할 수 있다. 하지만, `@/`를 사용한 `import` 구문은 VSCode의 Intellisense 가 활성화 되지 않는다. 이를 해결하기 위해 VSCode의 가이드에 따라 프로젝트 루트에 `jsconfig.json` 을 구성한다.
+Vue Cli3 로 생성한 프로젝트는 기본적으로 `src/` 에 대해 `@/` 가 alias 로 설정되어 있어서, `import` 구문에서 `@/` 를 사용 할 수 있는데, alias 를 사용한 `import` 구문은 VSCode의 Intellisense 가 활성화 되지 않는다. 이를 해결하기 위해 프로젝트 루트에 `jsconfig.json` 을 구성 할 수 있다.
 
 ```json
 {
@@ -97,9 +98,11 @@ Vue Cli3 로 생성한 프로젝트는 기본적으로 `src/` 에 대해 `@/` �
 ```
 
 #### vue peek
+또한 자바스크립트의 `import` 구문에서 `.vue`, `.js` 의 확장자를 생략 할 수 있는데, `.vue` 파일에서는 `.vue` 확장자를 생략한 `import` 구문에서 VSCode의 Intellisense 가 동작 하지않는다. 이 부분은 `vue peek` 플러그인을 설치 하여 해결 할 수 있다. 마찬가지로 자바스크립트 파일에서는 `.vue` 파일에 대한 Intellisense 가 활성화 되지 않는데, 아직까지 해결 방법을 찾지 못 했다.
 
-자바스크립트의 문법상 `import` 구문에서 `.vue`, `.js` 의 확장자를 생략 할 수 있는데, `.vue` 파일에서는 `.vue` 확장자를 생략한 `import` 구문에서 Intellisense 가 정상적으로 동작 하지않는다. 이 부분은 `vue peek` 플러그인을 설치 하면 해결 할 수 있다. 자바스크립트 파일에서는 `.vue` 파일에 대한 Intellisense 가 활성화 되지 않는데, 아직까지 해결 된 방법이 없다.
 
+## 정리하면
+ESLint는 기본적으로 Standard 스타일에 Indent는 스페이스바 4칸으로 규칙을 변경한 커스텀 룰을 사용한다. VSCode의 Intellisense는 자바스크립트 파일에서 `.vue` 파일의 `import` 구문에서는 활성화 되지 않고, 그 외에는 `@/` alias 사용하고 `.js` 및 `.vue` 의 확장자를 생략한 어느 `import` 구문에서도 VSCode 의 Path Intellisense 가 정상 작동한다.
 
 
 ## 기타 유용한 플러그인 설치 목록 
