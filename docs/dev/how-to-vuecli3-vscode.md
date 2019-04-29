@@ -64,7 +64,7 @@ VSCode의 확장 플러그인 ESLint를 설치하고 VSCode의 setting.json 에 
 "vetur.experimental.templateInterpolationService": false
 ```
 
-## 정의된 파일로 이동하기 (Ctrl + Alt + Right Click)
+## 정의된 파일로 이동하기 (Ctrl + Alt + 마우스 클릭)
 Vue CLI 3 로 생성한 프로젝트는 기본적으로 `src/` 의 alias 가 `@/` 으로 설정되어 있다. 그리고 javascript 문법상 `import` 구문을 사용할 때 `.vue` 나 `.js` 와 같은 확장자 생략이 가능하다. 하지만 실제로 상대경로 대신 `@/` 를 사용하거나 확장자를 생략한 `import` 구문을 사용하면 VSCode의 IntelliSense가 동작하지 않는다. 확장 플러그인 `Vue Peek` 를 설치 하고 `jsconfig.json` 환경을 구성하면 대부분 해결 할 수 있다.  
 
 ### 확장 플러그인 Vue Peek 설치 
