@@ -8,12 +8,10 @@ description: Vue CLI 3 로 구성한 프로젝트가 VSCode 에서 Eslint 및 In
 VSCode에서 Vue.js 개발 환경 구성하기
 ------------------------------------------
 ## 개요 
----
 Vue CLI 3 로 구성한 프로젝트가 VSCode 에서 Eslint 및 Intellisense 가 정상 작동하기 위해 필요한 플러그인을 소개하고 필요한 환경파일을 구성하는 방법을 정리한다.
 
 
 ## 요약
----
 1. VSCode 플러그인 ESLint, TSLint Vue, Vetur, vue peek 을 설치한다 
 2. `vue create <PROJECT NAME>` 으로 프로젝트를 생성할 때 `ESLint + Standard config` 옵션을 선택한다
 3. 프로젝트 루트의 `.eslintrc.js` 의 설정을 수정한다
@@ -23,7 +21,6 @@ Vue CLI 3 로 구성한 프로젝트가 VSCode 에서 Eslint 및 Intellisense �
 
 
 ## 상세 
----
 
 ### 작업 폴더 열기
 VSCode의 Intellisense 를 활성화 하기 위해 작업영역의 "폴더 추가"는 프로젝트 디렉토리를 직접 선택한다.
