@@ -107,6 +107,10 @@ Vue CLI 3 로 생성한 프로젝트는 기본적으로 `src/` 의 alias 가 `@/
 * 기타 플러그인 
     - Atom Keymap 
     - Korean Language Pack for Visual Studio Code 
+    - Auto Close Tag
+    - Auto Rename Tag
+    - npm
+    - npm Intellisense
 
 
 ## 참조링크
