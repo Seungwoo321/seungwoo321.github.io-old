@@ -8,7 +8,7 @@ description: Vue CLI 3 로 생성한 프로젝트에서 VSCode의 확장 플러�
 VSCode에서 Vue.js 개발 환경 구성하기
 ------------------------------------------
 ## 개요 
-VSCode 의 IntelliSense 기능이 커스텀 설정과 확장 플러그인을 통해서 Vue 개발 환경을 지원하는 방법과 VSCode에서 ESLint를 사용하는 방법을 알아본다. 
+VSCode 의 IntelliSense 기능을 커스텀 설정과 확장 플러그인을 통해서 Vue 개발 환경을 지원하고 VSCode에서 ESLint를 사용하는 방법을 정리한다. 
 
 
 ## ESLint 설정
