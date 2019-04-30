@@ -2,7 +2,7 @@
 title: post2
 author: Your Name
 date: 2019-01-09
-description: Lorem ipsum dolor sit amet consectetur adipiscing elit nostra lectus, vulputate faucibus ad leo rutrum convallis vehicula ante erat, litora praesent sagittis augue nullam ligula torquent vivamus. 
+description: test2 
 ---
 
 Lorem ipsum dolor sit amet consectetur adipiscing elit nostra lectus, vulputate faucibus ad leo rutrum convallis vehicula ante erat, litora praesent sagittis augue nullam ligula torquent vivamus. 
