@@ -57,7 +57,7 @@ VSCode의 확장 플러그인 ESLint를 설치하고 VSCode의 setting.json 에 
 
 
 ## 구문강조 & 코드 자동완성
-확장 플러그인 Vuetur 을 설치한다. Vetur 은 확장자가 `.vue` 인 파일에서 `scf` 를 입력하면 기본 Template 형식이 자동 완성 되고,  `Ctrl + Space` 로  어시스트 기능을 제공한다. 설치한 Vetur가 0.19.2 버전일 경우에는 알 수 없는 구문오류가 발생하니 VSCode의 `setting.json`에 다음 설정을 추가한다  
+확장 플러그인 Vetur 을 설치한다. Vetur 은 확장자가 `.vue` 인 파일에서 `scf` 를 입력하면 기본 Template 형식이 자동 완성 되고,  `Ctrl + Space` 로  어시스트 기능을 제공한다. 설치한 Vetur가 0.19.2 버전일 경우에는 알 수 없는 구문오류가 발생하니 VSCode의 `setting.json`에 다음 설정을 추가한다  
 
 ```json 
 // setting.json
