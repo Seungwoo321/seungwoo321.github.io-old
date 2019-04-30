@@ -14,7 +14,7 @@ VSCode 의 IntelliSense 기능을 커스텀 설정과 확장 플러그인을 통
 ## ESLint 설정
 Vue CLI 3 로 생성한 프로젝트는 사용자가 선택한 옵션에 따라서 eslint 의 설정이 package.json 에 추가되었거나, .eslintrc.js 파일로 생성되어 있다. VSCode에서 ESLint가 올바르게 작동하려면 확장 플러그인 ESLint 를 설치하고 setting.json 설정을 추가한다. 
 
-### .eslintrc.js
+#### .eslintrc.js
 여기에서는 `ESLint + Standard config` 를 선택 했고 공백을 스페이스바 4칸으로 변경하여 사용한다.
 
 ```js
@@ -38,7 +38,7 @@ module.exports = {
 }
 ```
 
-### 확장 플러그인 ESLint 설치 및 설정
+#### 확장 플러그인 ESLint 설치 및 설정
 VSCode의 확장 플러그인 ESLint를 설치하고 VSCode의 setting.json 에 설정을 추가한다.
 
 ```json
@@ -67,10 +67,10 @@ VSCode의 확장 플러그인 ESLint를 설치하고 VSCode의 setting.json 에 
 ## 정의된 파일로 이동하기 (Alt + 마우스 클릭)
 Vue CLI 3 로 생성한 프로젝트는 기본적으로 `src/` 의 alias 가 `@/` 으로 설정되어 있다. 그리고 javascript 문법상 `import` 구문을 사용할 때 `.vue` 나 `.js` 와 같은 확장자 생략이 가능하다. 하지만 실제로 상대경로 대신 `@/` 를 사용하거나 확장자를 생략한 `import` 구문을 사용하면 VSCode의 IntelliSense가 동작하지 않는다. 확장 플러그인 `Vue Peek` 를 설치 하고 `jsconfig.json` 환경을 구성하면 대부분 해결 할 수 있다.  
 
-### 확장 플러그인 Vue Peek 설치 
+#### 확장 플러그인 Vue Peek 설치 
 확장 플러그인 Vue Peek 를 설치 하면 `.vue` 파일에서 확장자를 생략한 import 구문에서 IntelliSense 가 잘 동작한다. 
 
-###	프로젝트 루트에 jsconfig.json 설정
+#### 프로젝트 루트에 jsconfig.json 설정
 다음 환경 구성은 alias '@/' 를 사용한 import 구문에서 IntelliSense 가 잘 동작한다.
 ```json 
 // jsconfig.json
