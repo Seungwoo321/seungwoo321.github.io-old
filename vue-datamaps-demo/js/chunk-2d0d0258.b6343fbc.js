@@ -1,0 +1,2 @@
+(window["webpackJsonp"]=window["webpackJsonp"]||[]).push([["chunk-2d0d0258"],{6778:function(e){e.exports=JSON.parse('{"type":"Topology","objects":{"nul":{"type":"GeometryCollection","geometries":[{"type":"Polygon","properties":{"name":null},"id":"-99","arcs":[[0]]}]}},"arcs":[[[0,9999],[9999,0],[0,-9999],[-9999,0],[0,9999]]],"transform":{"scale":[9.053905432543252e-10,9.053905432543252e-10],"translate":[-0.000004544999911,-0.000004496999935]}}')}}]);
+//# sourceMappingURL=chunk-2d0d0258.b6343fbc.js.map
