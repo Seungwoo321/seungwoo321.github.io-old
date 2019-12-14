@@ -1,15 +1,20 @@
-# About Me
+# About
 
 ## Seungwoo Lee
- Web frontend developer
+e-mail: seungwoo321@gmail.com 
 
 ## Works
 
-- Megazone 
-- Megazone Cloud
+Megazone - 2015.02 ~ 2018.07
 
-## Personal Project
- - ...
+Megazone Cloud - 2018.08 ~ 현재
 
- ## Social
-- seungwoo321@gmail.com 
+<!-- 
+## Todo List 
+
+* Padding Hack을 이용한 반응형 SVG
+* Private NPM 저장소 만들기
+* Express Application 배포 자동화 -->
+
+<hr>
+<main-footer/>

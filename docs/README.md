@@ -1,6 +1,15 @@
 ---
-title: Home
+index: true
 ---
-# My dev story
-## Here you can type anything you want using markdown format
-This is some awesome content
+<main-banner title="tail -f my-dev.log"></main-banner>
+<div class="wrapper">
+
+<!-- # Open Source in Github
+<open-source-index category="OpenSource"/> -->
+
+# Recent Posts
+<blog-index category="Blog"/>
+
+<hr>
+<main-footer/>
+</div>

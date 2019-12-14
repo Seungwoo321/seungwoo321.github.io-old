@@ -6,29 +6,43 @@
                     {{ post.frontmatter.title }}
                 </router-link>
             </h2>
-
             <p>
                 {{ post.frontmatter.description }}
             </p>
-
             <p>
-                <router-link :to="post.path">
-                    Read more
+                <router-link to="about">
+                    {{ post.frontmatter.author }}
                 </router-link>
+                | {{ post.frontmatter.date.substring(0, 10) }}
             </p>
+        </div>
+        <div v-if="noPost">
+            No post.
         </div>
     </div>
 </template>
 
 <script>
 export default {
-    props: ['category'],
+    props: ['category', 'tags', 'recent', 'related'],
     computed: {
+        noPost () {
+            return this.posts.length === 0
+        },
         posts () {
-            console.log(this)
-            console.log(this.$site.pages)
-            return this.$site.pages.filter(page => page.path.startsWith(`/${this.category}/`) && 
-            !page.frontmatter.blog_index).sort((a, b) => new Date(b.frontmatter.date) - new Date(a.frontmatter.date))
+            const posts = this.$site.pages.filter(this.categoryFilter).filter(this.relatedFilter).sort(this.sort)
+            return this.recent && posts.length > 3 ? posts.slice(0, 3) : posts
+        }
+    },
+    methods: {
+        categoryFilter (page) {
+            return page.path.startsWith(`/${this.category}/`) && !page.frontmatter.index
+        },
+        relatedFilter (page) {
+            return this.tags && this.tags.length > 0 || this.related ? page.frontmatter.tags && page.frontmatter.tags.include(this.tag) : true
+        },
+        sort (a, b) {
+            return new Date(b.frontmatter.date) - new Date(a.frontmatter.date)
         }
     }
 }
@@ -36,4 +50,4 @@ export default {
 
 <style>
 
-</style>
+</style>>

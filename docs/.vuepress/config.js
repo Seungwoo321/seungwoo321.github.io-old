@@ -1,25 +1,18 @@
 module.exports = {
-    title: "blog.devstory.kr",
-    description: "blog.devstory.kr",
+    title: "SEUNGWOO's TECH LOG",
     themeConfig: {
         nav: [
             {
-                text: 'Home',
-                link: '/'
+                text: 'Blog',
+                link: '/Blog/'
             },
             {
-                text: 'Dev',
-                link: '/dev/'
-                // items: [
-                //     {
-                //         text: 'Environment',
-                //         link: '/project/environment/'
-                //     }
-                // ]
+                text: 'Open Source',
+                link: '/OpenSource/'
             },
             {
-                text: 'English',
-                link: '/english/'
+                text: 'GitHub',
+                link: 'https://github.com/Seungwoo321'
             },
             {
                 text: 'About',
