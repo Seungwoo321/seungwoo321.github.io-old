@@ -1,27 +1,26 @@
 
 const md = require('markdown-it')();
 const striptags = require('./strip-tags');
-const hljs = require('highlight.js');
 module.exports = (options, context) => ({
     name: 'vuepress-plugin-demo-block',
-    chainMarkdown(config) {
-        config
-            .options
-            .linkify(true)
-            .typographer(true)
-            .langPrefix('language-')
-            .html(true)
-            .highlight((str, lang) => {
-                if (lang && hljs.getLanguage(lang)) {
-                    try {
-                        return '<pre class="hljs"><code class="' + lang + '">' +
-                            hljs.highlight(lang, str, true).value +
-                            '</code></pre>'
-                    } catch (__) { }
-                }
-                return '<pre class="hljs"><code>' + md.utils.escapeHtml(str) + '</code></pre>'
-            })
-    },
+    // chainMarkdown(config) {
+    //     config
+    //         .options
+    //         .linkify(true)
+    //         .typographer(true)
+    //         .langPrefix('language-')
+    //         .html(true)
+    //         // .highlight((str, lang) => {
+    //         //     if (lang && hljs.getLanguage(lang)) {
+    //         //         try {
+    //         //             return '<pre class="hljs"><code class="' + lang + '">' +
+    //         //                 hljs.highlight(lang, str, true).value +
+    //         //                 '</code></pre>'
+    //         //         } catch (__) { }
+    //         //     }
+    //         //     return '<pre class="hljs"><code>' + md.utils.escapeHtml(str) + '</code></pre>'
+    //         // })
+    // },
     extendMarkdown(md) {
         md.use(require('markdown-it-container'), 'demo', {
             validate: (params) => {
