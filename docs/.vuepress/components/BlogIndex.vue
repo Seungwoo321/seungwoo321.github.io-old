@@ -39,7 +39,7 @@ export default {
             return page.path.startsWith(`/${this.category}/`) && !page.frontmatter.index
         },
         relatedFilter (page) {
-            return this.tags && this.tags.length > 0 || this.related ? page.frontmatter.tags && page.frontmatter.tags.include(this.tag) : true
+            return this.related ? page.frontmatter.tags && this.tags.filter(tag => page.frontmatter.tags.indexOf(tag) > -1) : true
         },
         sort (a, b) {
             return new Date(b.frontmatter.date) - new Date(a.frontmatter.date)

@@ -9,7 +9,7 @@ index: true
 
 
 # Related Posts
-<blog-index category="Blog" :tags="['vue-pivottable', 'vue-datamaps']" related/>
+<blog-index category="Blog" :tags="['vue-pivottable', 'vue-datamaps']" :related="true"/>
 
 <hr>
 <main-footer/>
