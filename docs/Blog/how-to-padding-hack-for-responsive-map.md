@@ -7,31 +7,56 @@ description: Padding Hack을 이용해 SVG를 쉽게 반응형으로 구현해�
 ---
 
 ## 개요
-jQuery 기반의 라이브러리 datamaps를 Vue 컴포넌트로 변환하는 과정에서 반응형 SVG 맵으로 구현하기 위해 Padding Hack을 적용한 사례를 정리한다.
+Padding Hack을 이용해 SVG를 쉽게 반응형으로 구현해볼 수 있다. 
 
+## Padding Hack 이란 ?
+패딩 핵(Padding Hack) 의 기본 개념은 요소의 패딩과 너비의 관계를 사용하는 것이다. 패딩이 백분율로 설정되면 요소의 너비를 기준으로 백분율이 계산된다.
 
-## 이슈
+## Padding Hack 적용하기
 
+### 1단계
+height 와 width 속성을 제거한다 
 
+### 2단계  
+viewBox 를 지정한다 
 
-## 해결
+### 3단계
+div 컨테이너로 감싼다 
 
+### 4단계 
+다음 규칙에 따라 컨테이너에 스타일 적용한다 
+```css
+.container {
+  height: 0;
+  width: width-value;
+  padding-top: (svg height / svg width) * width-value
+  position: relative;
+}
+```
+먼저 컨테이너 높이를 축소한다. 백분율로 원하는 너비를 지정하고 다음 수식 (svg height / svg width) * width-value 을 사용하면 컨테이너의 가로 세로 비율이 svg 의 가로 세로 비율과 같아진다. 
 
+### 5단계 
+컨테이너 내부에 absolute 를 지정하고 컨테이너의 높이와 너비를 갖도록 크기를 조정한다 
+```css
+svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
 
-### Padding Hack 이란 ?
+```
 
+## 예제
 
-
-
-### 예제
-
-#### 반응형 SVG Map
+### 반응형 SVG Map
 
 :::demo
 ```html
 <template>
     <div class="container" ref="container">
-        <svg class="map">
+        <svg class="map" viewBox="0 0 750 500">
             <g>
                 <path v-for="(item, index) in pathData" :key="index"
                     :d="path(item)"></path>
@@ -50,16 +75,6 @@ export default {
         width: 0,
         height: 0
       }
-    }
-  },
-  props: {
-    width: {
-      type: Number,
-      default: 750
-    },
-    height: {
-      type: Number,
-      default: 500
     }
   },
   computed: {
@@ -144,16 +159,6 @@ export default {
         width: 0,
         height: 0
       }
-    }
-  },
-  props: {
-    width: {
-      type: Number,
-      default: 750
-    },
-    height: {
-      type: Number,
-      default: 500
     }
   },
   computed: {
