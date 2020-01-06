@@ -1,11 +1,8 @@
 ---
 index: true
 ---
-<main-banner title="vi post.md"></main-banner>
-<div class="wrapper">
-
+# Tags
+<tags-list-index/>
+# Newest
 <blog-index category="Blog"/>
 
-<hr>
-<main-footer/>
-</div>

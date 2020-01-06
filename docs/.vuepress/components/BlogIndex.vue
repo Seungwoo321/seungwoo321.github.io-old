@@ -10,6 +10,9 @@
                 {{ post.frontmatter.description }}
             </p>
             <p>
+                <tags-list :tags="getTags(post)"></tags-list>
+            </p>
+            <p>
                 <router-link to="about">
                     {{ post.frontmatter.author }}
                 </router-link>
@@ -23,26 +26,30 @@
 </template>
 
 <script>
+import TagsList from './TagsList'
 export default {
-    props: ['category', 'tags', 'recent', 'related'],
+    name: 'BlogIndex',
+    props: ['category', 'recent', 'related'],
+    components: {
+        TagsList
+    },
     computed: {
         noPost () {
             return this.posts.length === 0
         },
         posts () {
-            const posts = this.$site.pages.filter(this.categoryFilter).filter(this.relatedFilter).sort(this.sort)
-            return this.recent && posts.length > 3 ? posts.slice(0, 3) : posts
-        }
+            return this.$site.pages.filter(this.categoryFilter).sort(this.sort)
+        },
     },
     methods: {
         categoryFilter (page) {
             return page.path.startsWith(`/${this.category}/`) && !page.frontmatter.index
         },
-        relatedFilter (page) {
-            return this.related ? page.frontmatter.tags && this.tags.filter(tag => page.frontmatter.tags.indexOf(tag) > -1) : true
-        },
         sort (a, b) {
             return new Date(b.frontmatter.date) - new Date(a.frontmatter.date)
+        },
+        getTags (post) {
+            return post.frontmatter.tags && post.frontmatter.tags.split(',')
         }
     }
 }

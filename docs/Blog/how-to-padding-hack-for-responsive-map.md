@@ -2,12 +2,12 @@
 title: Padding Hack을 이용한 반응형 SVG 그리기
 author: Seungwoo Lee
 date: 2019-12-15
-tags: vue-datamaps, vue, datamaps
-description: Padding Hack을 이용해 SVG를 쉽게 반응형으로 구현해볼 수 있다.
+tags: vue-datamaps, vue, datamaps, 반응형, svg
+description: Padding Hack을 이용해 SVG를 쉽게 반응형으로 구현해볼 수 있었다.
 ---
 
 ## 개요
-Padding Hack을 이용해 SVG를 쉽게 반응형으로 구현해볼 수 있다. 
+vue-datamaps 코드를 작성하는 중, 반응형에 대한 문제에 맞닥뜨렸고 구글링을 통해 Padding Hack을 알게 되어 SVG 지도를 쉽게 보다 완전한 반응형으로 구현 할 수 있었다. 
 
 ## Padding Hack 이란 ?
 패딩 핵(Padding Hack) 의 기본 개념은 요소의 패딩과 너비의 관계를 사용하는 것이다. 패딩이 백분율로 설정되면 요소의 너비를 기준으로 백분율이 계산된다.

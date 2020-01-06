@@ -1,15 +1,10 @@
 ---
-index: true
+home: true
+heroImage: /20200107.jpg
+heroText: Seungwoo Lee
+tagline: Front-End Engineer
+actionText: To The Blog →
+actionLink: /Blog/
+footer: MIT Licensed | Copyright 2019 © SEUNGWOO's TECH LOG.
 ---
-<main-banner title="tail -f my-dev.log"></main-banner>
-<div class="wrapper">
-
-<!-- # Open Source in Github
-<open-source-index category="OpenSource"/> -->
-
-# Recent Posts
-<blog-index category="Blog"/>
-
-<hr>
-<main-footer/>
-</div>
+<summary-index category="Blog"/>

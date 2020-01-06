@@ -1,6 +1,6 @@
 <template>
-    <div style="display:flex;">
-        <div class="flex-card" v-for="post in posts">
+    <div class="flex-container">
+        <div class="flex-card" v-for="post in posts.slice(0, 3)">
             <strong>
                 <router-link :to="post.path">
                     {{ post.frontmatter.title }}
@@ -26,10 +26,15 @@ export default {
 </script>
 
 <style scoped>
+.flex-container {
+    display:flex;
+    line-height: 1.5rem;
+    margin-bottom: 20px;
+}
 .flex-card {
     flex: 1 1;
     width: 50%;
-    height: 301px;
+    /* height: 100px; */
     padding: 20px;
     float: left;
     box-sizing: border-box;
