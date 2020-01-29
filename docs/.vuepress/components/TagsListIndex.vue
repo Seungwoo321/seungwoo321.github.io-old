@@ -1,7 +1,7 @@
 <template>
     <div class="tags-list-index">
         <span v-for="(key, index) in Object.keys(tags)" :key="index">
-            <router-link to="/">
+            <router-link :to="`?tag=${key.trim()}`">
                 {{ key }}
             </router-link>
             ({{ tags[key] }})
@@ -15,7 +15,6 @@ export default {
         tags () {
             return this.$site.pages.reduce((accumulator, currentValue) => {
                 currentValue.frontmatter.tags && currentValue.frontmatter.tags.split(',').forEach(tag => {
-                    console.log(tag.trim())
                     if (typeof accumulator[tag] === 'undefined') {
                         accumulator[tag] = 0
                     }

@@ -1,5 +1,9 @@
 <template>
     <div>
+        <h1 :id="title">
+            <a :href="`#${title}`" class="header-anchor">#</a>
+            {{ title }}
+        </h1>
         <div v-for="post in posts">
             <h2>
                 <router-link :to="post.path">
@@ -13,7 +17,7 @@
                 <tags-list :tags="getTags(post)"></tags-list>
             </p>
             <p>
-                <router-link to="about">
+                <router-link to="/about">
                     {{ post.frontmatter.author }}
                 </router-link>
                 | {{ post.frontmatter.date.substring(0, 10) }}
@@ -29,21 +33,30 @@
 import TagsList from './TagsList'
 export default {
     name: 'BlogIndex',
-    props: ['category', 'recent', 'related'],
+    props: ['category', 'related'],
     components: {
         TagsList
     },
     computed: {
+        title () {
+            return this.isQuery ? this.$route.query.tag : 'Newest'
+        },
+        isQuery() {
+            return !!this.$route.query.tag
+        },
         noPost () {
             return this.posts.length === 0
         },
         posts () {
-            return this.$site.pages.filter(this.categoryFilter).sort(this.sort)
+            return this.$site.pages.filter(this.categoryFilter).filter(this.tagFilter).sort(this.sort)
         },
     },
     methods: {
         categoryFilter (page) {
             return page.path.startsWith(`/${this.category}/`) && !page.frontmatter.index
+        },
+        tagFilter (page) {
+            return this.isQuery ? page.frontmatter.tags && page.frontmatter.tags.indexOf(this.$route.query.tag) > -1 : true
         },
         sort (a, b) {
             return new Date(b.frontmatter.date) - new Date(a.frontmatter.date)

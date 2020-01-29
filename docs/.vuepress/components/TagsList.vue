@@ -1,7 +1,7 @@
 <template>
     <div>
         <span class="tag" v-for="(key, index) in tags" :key="index">
-            <router-link to="/">
+            <router-link :to="`?tag=${key.trim()}`">
                 {{ key }}
             </router-link>
         </span>
