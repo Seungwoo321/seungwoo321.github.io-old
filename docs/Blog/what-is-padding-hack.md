@@ -24,26 +24,30 @@ SVG 지도를 반응형으로 구현하기 위해 패딩 핵(Padding Hack)을 �
 
 예를 들어 요소의 컨테이닝 블록의 너비가 400px 일 때 요소에 `padding-bottom` 또는 `padding-top`을 50%로 설정하면 그 `padding`의 값은 200px이 될 것 이다.
 
-다음 예제들은 개발자 도구에서 확인해보면 div.demo-block-content 내부의 div가 컨테이닝 블록이 되어 예제 코드 div 요소의 `padding` 값에 영향을 준다.
+다음 예제들은 div.demo-block-content 내부의 div가 컨테이닝 블록이 되어 예제 코드 div 요소의 `padding` 값에 영향을 준다.
+
+:::tip
+개발자 도구에서 해당 div 요소를 선택하고 부여 된 `padding` 속성 값을 선택/선택해제 하면서 확인 해보자.  
+:::
 
 * padding-top 10% :
 :::demo
 ```html
-  <div style="width:100%;height:0;padding-top:10%;background-color: yellow;"></div>
+  <div style="width:100%;padding-top:10%;background-color: yellow;"></div>
 ```
 :::
 
 * padding-bottom 20%
 :::demo
 ```html
-  <div style="width:100%;height:0;padding-bottom:20%;background-color: yellow;"></div>
+  <div style="width:100%;padding-bottom:20%;background-color: yellow;"></div>
 ```
 :::
 
 * width 50%; pading-top 30%
 :::demo
 ```html
-  <div style="width:50%;height:0;padding-top:30%;background-color: yellow;"></div>
+  <div style="width:50%;padding-top:30%;background-color: yellow;"></div>
 ```
 :::
 
@@ -54,7 +58,8 @@ SVG 지도를 반응형으로 구현하기 위해 패딩 핵(Padding Hack)을 �
 :::demo
 ```html
 <div style="position:relative;width:400px;height:400px;border:1px solid;">
-  <div style="position:abosolute;width:100%;height:0;padding-top:50%;background-color: yellow;"></div>
+  <div style="position:abosolute;width:100%;height:0;padding-top:50%;background-color: yellow;">
+  </div>
 </div>
 ```
 :::
@@ -90,7 +95,7 @@ SVG의 경우 height 와 width 속성을 제거한다.
 ### 2단계
 SVG를 div 컨테이너로 감싼다.
 
-```html
+```html{1,5}
 <div class="container">
   <svg class="map">
     <!-- ... -->
@@ -100,16 +105,24 @@ SVG를 div 컨테이너로 감싼다.
 
 
 ### 3단계 
-다음 규칙에 따라 div 컨테이너에 스타일 적용한다.
-```css
+
+위의 div 예제의 스타일과 다르게 컨테이너 높이를 축소하고, padding 값을 지정한다.
+```css{2}
 .container {
   height: 0;
-  width: width-value;
-  padding-top: (svg height / svg width) * width-value
+  width: 100%;
+  padding-top: 66.66%
   position: relative;
 }
 ```
-먼저 컨테이너 높이를 축소한다. 백분율로 원하는 너비를 지정하고 다음 수식 (svg height / svg width) * width-value 을 사용하여 padding 값을 지정하면 컨테이너의 가로 세로 비율이 svg 의 가로 세로 비율과 같아진다. 
+
+:::tip
+
+다음 수식을 사용하여 padding 값을 지정하면 컨테이너의 가로 세로 비율이 svg 의 가로 세로 비율과 같아진다.
+
+  * (svg height / svg width) * width-value
+
+:::
 
 ### 4단계 
 컨테이너 내부의 요소에 absolute 를 지정해서 컨테이너와 같은 높이와 너비를 갖도록 조정 한다.
@@ -128,7 +141,7 @@ SVG를 div 컨테이너로 감싼다.
 위 단계에 따라 Vue 에서 SVG 지도에 패딩 핵(Padding Hack) 을 적용해서 반응형으로 구현한 예제이다.
 
 :::demo
-```html
+```html{66-80}
 <template>
     <div class="container" ref="container">
         <svg class="map">
@@ -139,7 +152,6 @@ SVG를 div 컨테이너로 감싼다.
         </svg>
     </div>
 </template>
-
 <script>
 import geojson from '@/world.json'
 import { geoEquirectangular, geoPath } from 'd3-geo'
@@ -195,6 +207,7 @@ export default {
 }
 </script>
 <style>
+/* Padding Hack Style */
 .container {
     width: 100%;
     height: 0;
