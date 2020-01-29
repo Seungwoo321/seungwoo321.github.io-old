@@ -2,7 +2,7 @@
 title: Padding Hack으로 반응형 SVG 만들기
 author: Seungwoo Lee
 date: 2019-12-15
-tags: vue-datamaps, vue, datamaps, 반응형, svg
+tags: vue-datamaps, vue, datamaps, 반응형, svg, css, padding
 description: Padding Hack을 이용해 SVG를 쉽게 반응형으로 구현해볼 수 있었다.
 ---
 ![vue-datamaps-example.png](/vue-datamaps-example.png)
@@ -11,10 +11,10 @@ description: Padding Hack을 이용해 SVG를 쉽게 반응형으로 구현해�
 SVG 지도를 반응형으로 구현하기 위해 패딩 핵(Padding Hack)을 학습하고 사용한 경험을 정리하자.
 
 ## 배경
-지역 관련 데이터를 표현하기 위한 고민을 하던 중 D3를 사용하여 지도를 그리고, 이를 javascript 에서 쉽게 사용 할 수 있도록 구현된 라이브러리 [DataMaps](https://datamaps.github.io/)를 탐색하게 되었다. 원하는 기능을 커스텀 하고 Vue 프레임워크 기반의 프로젝트에서 바로 가져다 쓸 수 있도록 하고 싶어서 단순히 Vue 로 감싸는 것이 아닌, 소스내 로직을 직접 Vue로 옮긴 [vue-datamaps](https://github.com/Seungwoo321/vue-datamaps#readme)를 작성하게 되었다.
+지역 관련 데이터를 표현하기 위한 고민을 하던 중 D3를 사용하여 지도를 그리고, 이를 javascript 에서 쉽게 사용 할 수 있도록 구현된 라이브러리 [DataMaps](https://datamaps.github.io/)를 탐색하였다. 원하는 기능을 커스텀 하고 Vue 프레임워크 기반의 프로젝트에서 바로 가져다 쓸 수 있도록 하고 싶어서 단순히 Vue 로 감싸는 것이 아닌, 소스내 로직을 직접 Vue로 옮긴 [vue-datamaps](https://github.com/Seungwoo321/vue-datamaps#readme)를 작성하게 되었다.
 
 ## DataMaps 에서 구현된 반응형
-반응형과 관련된 부분의 코드를 살펴 보면 옵션으로 `responsive: true` 을 설정 했을 때 내부요소인 SVG에 패딩 핵(Padding Hack)을 사용하는 스타일이 적용된다. 그리고 window 창의 resize 이벤트 마다 현재크기에서 이전크기를 나눠서 새로운 scale 값으로 변경하는 `Datamaps.prototype.resize` 메서드가 실행된다. [문서](https://github.com/markmarkoh/datamaps#responsive-maps)에서는 SVG를 감싸는 외부 요소인 container에 패딩 핵(Padding Hack)을 위한 스타일링에 대해 설명 하고 있다.
+반응형과 관련된 부분의 코드를 살펴 보면 옵션으로 `responsive: true` 을 설정 했을 때 내부요소인 SVG에 패딩 핵(Padding Hack)을 사용하는 스타일이 적용된다. 그리고 window 창의 resize 이벤트 마다 현재크기에서 이전크기를 나눠서 d3 api 를 사용해 새로운 scale 값으로 변경하는 `Datamaps.prototype.resize` 메서드가 실행된다. [문서](https://github.com/markmarkoh/datamaps#responsive-maps)에서는 SVG를 감싸는 외부 요소인 container에 패딩 핵(Padding Hack)을 위한 스타일링에 대해 설명 하고 있다.
 
 ## vue-datamaps 에서 구현한 반응형
 옵션이 아닌 기본으로 패딩 핵(Padding Hack) 스타일링이 적용되어 있어서, 항상 `responsive` 하다. 직접 스케일값을 변경하는 `Datamaps.prototype.resize`의 로직은 제외하였다.
@@ -22,7 +22,9 @@ SVG 지도를 반응형으로 구현하기 위해 패딩 핵(Padding Hack)을 �
 ## Padding Hack 이란 ?
 패딩 핵(Padding Hack) 의 기본 개념은 요소의 패딩과 너비의 관계를 사용하는 것이다. 패딩이 백분율로 설정되면 요소의 너비를 기준으로 그 백분율의 값이 계산된다. 
 
-예를 들어 최대 너비가 400px인 요소가 있을 때 `padding-bottom` 또는 `padding-top`에 50%를 설정하면 `padding-bottom` 또는 `padding-top`의 값은 200px이 될 것 이다.
+예를 들어 요소의 컨테이닝 블록의 너비가 400px 일 때 요소에 `padding-bottom` 또는 `padding-top`을 50%로 설정하면 그 `padding`의 값은 200px이 될 것 이다.
+
+다음 예제들은 개발자 도구에서 확인해보면 div.demo-block-content 내부의 div가 컨테이닝 블록이 되어 예제 코드 div 요소의 `padding` 값에 영향을 준다.
 
 * padding-top 10% :
 :::demo
@@ -45,6 +47,8 @@ SVG 지도를 반응형으로 구현하기 위해 패딩 핵(Padding Hack)을 �
 ```
 :::
 
+이번에는 추가된 외부 div 요소가 컨테이닝 블록으로 식별되어 외부 div 요소의 너비 내에서 `padding` 값이 계산 되는 예제이다.
+
 * 외부 요소의 크기가 400px 이고, 내부 요소의 width 100%, padding-top 50%
 
 :::demo
@@ -64,11 +68,17 @@ SVG 지도를 반응형으로 구현하기 위해 패딩 핵(Padding Hack)을 �
 ```
 :::
 
+:::tip
+
+* [MDN문서- 컨테이닝 블록의 모든 것](https://developer.mozilla.org/ko/docs/Web/CSS/All_About_The_Containing_Block)
+
+:::
+
 ## Padding Hack 적용하기 
-다음은 `SVG`에 패딩핵(Padding Hack)을 적용하는 내용이므로 `img`나 `ifream`에 적용할 때는 차이가 있을 수 있다. 상세한 내용은 글 하단의 `참조링크`를 확인하자.
+다음은 `SVG`에 패딩핵(Padding Hack)을 적용하는 내용으로 `img`나 `ifream`에 적용할 때는 차이가 있을 수 있다.
 
 ### 1단계
-SVG의 height 와 width 속성을 제거한다.
+SVG의 경우 height 와 width 속성을 제거한다.
 ```html
 
 <svg class="map">
@@ -99,12 +109,12 @@ SVG를 div 컨테이너로 감싼다.
   position: relative;
 }
 ```
-먼저 컨테이너 높이를 축소한다. 백분율로 원하는 너비를 지정하고 다음 수식 (svg height / svg width) * width-value 을 사용하면 컨테이너의 가로 세로 비율이 svg 의 가로 세로 비율과 같아진다. 
+먼저 컨테이너 높이를 축소한다. 백분율로 원하는 너비를 지정하고 다음 수식 (svg height / svg width) * width-value 을 사용하여 padding 값을 지정하면 컨테이너의 가로 세로 비율이 svg 의 가로 세로 비율과 같아진다. 
 
 ### 4단계 
-컨테이너 내부에 absolute 를 지정하고 컨테이너의 높이와 너비를 갖도록 크기를 조정한다.
+컨테이너 내부의 요소에 absolute 를 지정해서 컨테이너와 같은 높이와 너비를 갖도록 조정 한다.
 ```css
-svg {
+.map {
   position: absolute;
   top: 0;
   left: 0;
@@ -115,7 +125,7 @@ svg {
 ```
 
 ### 반응형 SVG 지도 Vue 컴포넌트
-위 단계에 따라 Vue 에서 SVG 지도에 Padding Hack 을 적용해서 반응형으로 구현한 예제이다.
+위 단계에 따라 Vue 에서 SVG 지도에 패딩 핵(Padding Hack) 을 적용해서 반응형으로 구현한 예제이다.
 
 :::demo
 ```html
