@@ -4,5 +4,5 @@ index: true
 # Tags
 <tags-list-index/>
 
-<blog-index category="Blog"/>
+<blog-index category="blog"/>
 
