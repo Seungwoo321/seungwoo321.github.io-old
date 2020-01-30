@@ -19,6 +19,14 @@ module.exports = {
             }
         ]
     ],
+    markdown: {
+        config: md => {
+            md.use(require('markdown-it-deflist'))
+        },
+        extendMarkdown: md => {
+            md.use(require('markdown-it-imsize'))
+        }
+    },
     themeConfig: {
         theme: '@vuepress/vue',
         lastUpdated: 'Last Updated',
