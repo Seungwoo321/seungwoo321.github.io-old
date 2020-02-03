@@ -28,8 +28,10 @@ Vue 프레임워크 기반의 비공개 UI 템플릿을 만들게 되었는데, 
 ```bash
 # 글로벌로 패키지 설치
 $ npm install -g sinopia
+
 # 서비스 실행
 $ sinopia
+
 # 사용자 생성  
 $ npm adduser --registry http://localhost:4873/
 ```
@@ -42,6 +44,7 @@ $ npm adduser --registry http://localhost:4873/
 ```bash
 # 로그 남기지 않고 백그라운드에서 실행하기
 $ nohup sinopia 1>/dev/null 2>&1 &
+
 # 종료하기
 $ pkill -9 sinopia
 ```
@@ -52,7 +55,7 @@ $ pkill -9 sinopia
 ```bash
 # 기존 설정 확인 & 저장소 변경
 $ npm config list
-$ npm  set registry http://localhost:4873
+$ npm set registry http://localhost:4873
 ```
 
 * 글로벌로 변경하지 않고 커맨드에 옵션을 추가하여 사용
@@ -61,6 +64,7 @@ $ npm  set registry http://localhost:4873
 $ npm i --registry http://localhost:4873
 $ npm publish --registry http://localhost:4873
 ```
+
 :::tip
 Github 문서의 사용 사례를 보면 주 목적이었던 `개인 패키지 사용` 외 에도 npmjs.org 레지스트리의 캐시 역할도 있기 때문에 개인적으로는 저장소를 변경하는 방식을 선호한다.
 :::
@@ -135,11 +139,11 @@ logs:
 
 ## 기타 설정 
 * 외부에서의 연결과 용량 제한을 늘리기 위해 설정 파일 하단에 `listen`과 `max_body_size` 를 추가 하여 사용 하고 있다.
-* 전체 옵션은 [여기](https://github.com/rlidwka/sinopia/blob/master/conf/full.yaml) 에서 확인 할 수 있다.
+* 전체 옵션은 [여기](https://github.com/rlidwka/sinopia/blob/master/conf/full.yaml) 에서 확인 하자.
+
 ```yaml
 listen: 0.0.0.0:4873
 max_body_size: 100mb
-
 ```
 
 참고 링크
