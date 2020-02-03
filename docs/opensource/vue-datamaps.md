@@ -19,6 +19,7 @@ $ npm install -D vue-datamaps
 ```
 
 ## Usage
+### Global Component
 main.js
 ```js
 import Vue from 'vue'
@@ -27,7 +28,9 @@ import VueDatamaps from 'vue-datamaps'
 Vue.use(VueDatamaps)
 ```
 
-_vue template_
+### Component style
+__app.vue__
+
 ```html
 <template>
     <div id="app">
@@ -35,7 +38,17 @@ _vue template_
     </div>
 </template>
 
+<script>
+import { VueDatamaps } from 'vue-datamaps'
+
+</script>
+
+<style>
+
+</style>
 ```
+
+
 
 
 ## Inspired
@@ -47,15 +60,6 @@ _vue template_
 
 ...
 
-## TODO
-* [x] Base 
-* [x] Hover
-* [ ] Choropleth
-* [x] Label
-* [x] Bubble
-* [x] Arcs
-* [x] Projections & Graticules
-* [x] Zoom
 
 ## License
 MIT

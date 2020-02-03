@@ -37,6 +37,10 @@ module.exports = {
                 link: '/blog/'
             },
             {
+                text: 'Open Source',
+                link: '/opensource/'
+            },
+            {
                 text: 'About',
                 link: '/about/'
             },
