@@ -46,6 +46,7 @@ export default {
 ```bash
 $ git clone https://github.com/Seungwoo321/vue-datamaps.git 
 $ cd vue-datamaps/demo/example-vue-cli3/
+$ npm install
 $ npm run serve
 ```
 
