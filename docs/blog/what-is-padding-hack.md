@@ -2,9 +2,16 @@
 title: Padding Hack으로 반응형 SVG 만들기
 author: Seungwoo Lee
 date: 2019-12-15
-tags: vue-datamaps, vue, datamaps, 반응형, svg, css, padding
-description: Padding Hack을 이용해 SVG를 쉽게 반응형으로 구현해볼 수 있었다.
+tags: ["vue-datamaps", "vue", "datamaps", "반응형", "svg", "css", "padding"]
+description: Padding Hack을 이용해 SVG를 반응형으로 구현해보자
+meta: 
+  - name: description
+    content: Padding Hack을 이용해 SVG를 반응형으로 구현해보자
+  - name: keywords
+    content: Padding Hack
 ---
+# Padding Hack으로 반응형 SVG 만들기
+
 ![vue-datamaps-example.png](/vue-datamaps-example.png)
 
 ## 개요

@@ -2,11 +2,17 @@
 title: 여러개의 GitHub/CodeCommit 인증정보 관리하기
 author: Seungwoo Lee
 date: 2019-04-21
-description: Credential 저장소의 store 모드를 사용하여 각 프로젝트의 git 디렉토리에 인증정보를 저장하면 단일 컴퓨터에서 여러 GitHub/CodeCommit 인증정보를 매번 입력하지 않고 HTTPS 프로토콜로 리모트 저장소에 접근 할 수 있다. 
+tags: ["git", "CodeCommit"]
+description: 여러개의 GitHub/CodeCommit 인증정보를 매번 입력하지 않고 원격 저장소에 접근 할 수 있다. 
+meta: 
+  - name: description
+    content: 여러개의 GitHub/CodeCommit 인증정보를 매번 입력하지 않고 원격 저장소에 접근 할 수 있다. 
+  - name: keywords
+    content: 여러개의 GitHub/CodeCommit 인증 정보 관리하기
 ---
 
-여러개의 GitHub/CodeCommit 인증정보 관리하기
-------------------------------------------
+# 여러개의 GitHub/CodeCommit 인증정보 관리하기
+
 
 ### 개요
 * Git 도구 Credential 저장소는 HTTPS 프로토콜로 리모트 저장소에 접근할 때 인증정보를 저장해두고 자동으로 입력해주는 시스템이다.

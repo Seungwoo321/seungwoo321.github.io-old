@@ -14,10 +14,8 @@ export default {
     computed: {
         tags () {
             return this.$site.pages.reduce((accumulator, currentValue) => {
-                currentValue.frontmatter.tags && currentValue.frontmatter.tags.split(',').forEach(tag => {
-                    if (typeof accumulator[tag] === 'undefined') {
-                        accumulator[tag] = 0
-                    }
+                currentValue.frontmatter.tags && currentValue.frontmatter.tags.split(', ').forEach(tag => {
+                    if (!accumulator[tag]) accumulator[tag] = 0
                     accumulator[tag] ++
                 })
                 return accumulator
