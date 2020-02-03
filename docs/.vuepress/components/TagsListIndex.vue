@@ -14,7 +14,8 @@ export default {
     computed: {
         tags () {
             return this.$site.pages.reduce((accumulator, currentValue) => {
-                currentValue.frontmatter.tags && currentValue.frontmatter.tags.split(', ').forEach(tag => {
+
+                currentValue.frontmatter.tags && currentValue.frontmatter.tags.forEach(tag => {
                     if (!accumulator[tag]) accumulator[tag] = 0
                     accumulator[tag] ++
                 })

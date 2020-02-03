@@ -62,7 +62,7 @@ export default {
             return new Date(b.frontmatter.date) - new Date(a.frontmatter.date)
         },
         getTags (post) {
-            return post.frontmatter.tags && post.frontmatter.tags.split(',')
+            return post.frontmatter.tags && post.frontmatter.tags
         }
     }
 }
