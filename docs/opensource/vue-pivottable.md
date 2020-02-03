@@ -1,7 +1,7 @@
 ---
 title: Vue-Pivottable
 author: Seungwoo Lee
-tags: vue-pivottable, vue, pivottable
+tags: ["vue-pivottable", "vue", "pivottable"]
 date: 2019-12-15
 description: It is a Vue port of the jQuery-based PivotTable.js
 ---

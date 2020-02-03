@@ -1,7 +1,7 @@
 ---
 title: Vue-Datamaps
 author: Seungwoo Lee
-tags: vue-datamaps, vue, datamaps
+tags: ["vue-datamaps", "vue", "datamaps"]
 date: 2019-12-15
 description: It is a Vue port of the javascript-based DataMaps
 ---
