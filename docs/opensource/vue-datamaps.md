@@ -10,7 +10,19 @@ description: It is a Vue port of the javascript-based DataMaps
 [![npm](https://flat.badgen.net/npm/v/vue-datamaps)](https://npmjs.com/package/vue-datamaps)
 [![npm](https://flat.badgen.net/npm/dt/vue-datamaps)](https://npmjs.com/package/vue-datamaps)
 
-It is a Vue port of the jQuery-based [DataMaps](https://datamaps.github.io/)
+It is a Vue port of the javascript-based [DataMaps](https://datamaps.github.io/)
+
+## Live Demo
+[link](https://jsfiddle.net/front123/437a5wvf/)
+
+## Run Demo 
+
+```bash
+$ git clone https://github.com/Seungwoo321/vue-datamaps.git 
+$ cd vue-datamaps/demo/example-vue-cli3/
+$ npm install
+$ npm run serve
+```
 
 ## Installation
 ```bash
@@ -22,6 +34,25 @@ $ npm install -D vue-datamaps
 ### Required
 * The [json data](https://github.com/Seungwoo321/vue-datamaps/tree/master/demo/example-vue-cli3/public/) must be in a public directory.
 
+#### Global
+main.js
+```js
+import Vue from 'vue'
+import VueDatamaps from 'vue-datamaps'
+
+Vue.use(VueDatamaps)
+
+```
+_vue template_
+```vue
+<template>
+    <div id="app">
+        <vue-datamaps></vue-datamaps>
+    </div>
+</template>
+```
+
+#### Component Style
 _vue template_
 ```vue
 <template>
@@ -41,22 +72,10 @@ export default {
 </style>
 ```
 
-## Run demo 
-
-```bash
-$ git clone https://github.com/Seungwoo321/vue-datamaps.git 
-$ cd vue-datamaps/demo/example-vue-cli3/
-$ npm install
-$ npm run serve
-```
-
-<!-- ## Live demo
-
-[link]() -->
 
 ## Example
 
-![vue-datamaps-demo-basic.png](/vue-datamaps-demo-basic.png)
+![vue-datamaps-demo-basic.png](https://seungwoo321.github.io/vue-datamaps-demo-basic.png)
 
 ```vue
 <template>
@@ -80,7 +99,7 @@ export default {
 </style>
 ```
 
-![vue-datamaps-demo-state-label.png](/vue-datamaps-demo-state-label.png)
+![vue-datamaps-demo-state-label.png](https://seungwoo321.github.io/vue-datamaps-demo-state-label.png)
 
 ```vue
 <template>
@@ -342,7 +361,7 @@ export default {
 </style>
 ```
 
-![vue-datamaps-demo-bubbles.png](/vue-datamaps-demo-bubbles.png)
+![vue-datamaps-demo-bubbles.png](https://seungwoo321.github.io/vue-datamaps-demo-bubbles.png)
 
 ```vue
 <template>
@@ -449,7 +468,7 @@ export default {
 </style>
 ```
 
-![vue-datamaps-demo-arcs.png](/vue-datamaps-demo-arcs.png)
+![vue-datamaps-demo-arcs.png](https://seungwoo321.github.io/vue-datamaps-demo-arcs.png)
 
 ```vue
 <template>
@@ -553,7 +572,7 @@ export default {
 </style>
 ```
 
-![vue-datamaps-demo-graticules.png](/vue-datamaps-demo-graticules.png)
+![vue-datamaps-demo-graticules.png](https://seungwoo321.github.io/vue-datamaps-demo-graticules.png)
 
 ```vue
 <template>
@@ -631,7 +650,7 @@ export default {
 </style>
 ```
 
-![vue-datamaps-demo-zoom.png](/vue-datamaps-demo-zoom.png)
+![vue-datamaps-demo-zoom.png](https://seungwoo321.github.io/vue-datamaps-demo-zoom.png)
 
 ```vue
 <template>
@@ -739,7 +758,7 @@ export default {
 </style>
 ```
 
-![vue-datamaps-demo-south-korea.png](/vue-datamaps-demo-south-korea.png)
+![vue-datamaps-demo-south-korea.png](https://seungwoo321.github.io/vue-datamaps-demo-south-korea.png)
 
 ```vue
 <template>
@@ -811,7 +830,7 @@ export default {
 </style>
 ```
 
-![vue-datamaps-demo-custom-color.png](/vue-datamaps-demo-custom-color.png)
+![vue-datamaps-demo-custom-color.png](https://seungwoo321.github.io/vue-datamaps-demo-custom-color.png)
 
 ```vue
 <template>
