@@ -1299,6 +1299,7 @@ If slot `hoverinfo` and event `custom:popup`||`custom:popup-bubble`||`custom:pop
 ## Inspired
 * [markmarkoh/datamaps](https://datamaps.github.io/) - original
 * [btmills/react-datamaps](https://github.com/btmills/react-datamaps) - React-based datamaps library
+* [jsonmaur/aws-regions](https://github.com/jsonmaur/aws-regions) - AWS Regions and Availability Zones
 
 
 
