@@ -2,7 +2,7 @@
 title: 비공개 NPM 저장소 구성하기
 author: Seungwoo Lee
 date: 2020-02-02
-tags: ["private npm", "npm", "sinopia"]
+tags: ["npm", "sinopia"]
 description: 오픈소스 sinopia를 사용해서 Prvate NPM 저장소를 구성하고 스코프 문제를 해결한 경험을 정리하자.
 meta: 
     - name: description
@@ -148,7 +148,7 @@ listen: 0.0.0.0:4873
 max_body_size: 100mb
 ```
 
-참고 링크
+## 참조링크
 * [npm-scope](https://docs.npmjs.com/using-npm/scope.html)
 * [npm-about-private-packages](https://docs.npmjs.com/about-private-packages)
 * [sinopia](https://www.npmjs.com/package/sinopia)

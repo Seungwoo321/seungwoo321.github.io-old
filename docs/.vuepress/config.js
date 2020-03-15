@@ -51,8 +51,8 @@ module.exports = {
                 link: '/blog/'
             },
             {
-                text: 'Open Source',
-                link: '/opensource/'
+                text: 'Portfolio',
+                link: '/portfolio/'
             },
             {
                 text: 'About',
