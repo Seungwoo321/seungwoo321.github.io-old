@@ -11,4 +11,8 @@ export default ({
         name: 'google-site-verification',
         path: '/google603171b62dec4aac.html'
     })
+    routes.unshift({
+        name: 'naver-site-verification',
+        path: '/naverd0af24031866c2cb391f545d6da12043.html'
+    })
 }
