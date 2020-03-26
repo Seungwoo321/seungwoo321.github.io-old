@@ -5,5 +5,10 @@ export default ({
     router, // the router instance for the app
     siteData // site metadata
 }) => {
-    // ...apply enhancements to the app
+    const { routes } = router.options
+
+    routes.unshift({
+        name: 'google-site-verification',
+        path: '/google603171b62dec4aac.html'
+    })
 }

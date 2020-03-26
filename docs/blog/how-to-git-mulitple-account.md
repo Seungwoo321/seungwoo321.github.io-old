@@ -4,11 +4,6 @@ author: Seungwoo Lee
 date: 2019-04-21
 tags: ["git", "CodeCommit"]
 description: 여러개의 GitHub/CodeCommit 인증정보를 매번 입력하지 않고 원격 저장소에 접근 할 수 있다. 
-meta: 
-  - name: description
-    content: 여러개의 GitHub/CodeCommit 인증정보를 매번 입력하지 않고 원격 저장소에 접근 할 수 있다. 
-  - name: keywords
-    content: 여러개의 GitHub/CodeCommit 인증 정보 관리하기
 ---
 
 # 여러개의 GitHub/CodeCommit 인증정보 관리하기

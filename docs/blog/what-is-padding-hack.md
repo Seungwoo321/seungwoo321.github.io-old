@@ -4,11 +4,6 @@ author: Seungwoo Lee
 date: 2019-12-15
 tags: ["svg", "css"]
 description: Padding Hack을 이용해 SVG를 반응형으로 구현해보자
-meta: 
-  - name: description
-    content: Padding Hack을 이용해 SVG를 반응형으로 구현해보자
-  - name: keywords
-    content: Padding Hack
 ---
 # Padding Hack으로 반응형 SVG 만들기
 

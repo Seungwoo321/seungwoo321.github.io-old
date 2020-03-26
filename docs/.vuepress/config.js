@@ -17,21 +17,7 @@ module.exports = {
             {
                 'ga': 'UA-155428271-1'
             }
-        ],
-        {
-            'seo': {
-                siteTitle: (_, $site) => $site.title,
-                title: $page => $page.title,
-                description: $page => $page.frontmatter.description,
-                author: (_, $site) => $site.themeConfig.author,
-                tags: $page => $page.frontmatter.tags,
-                url: (_, $site, path) => ($site.themeConfig.domain || '') + path,
-                image: ($page, $site) => $page.frontmatter.image && (($site.themeConfig.domain || '') + $page.frontmatter.image),
-                publishedAt: $page => $page.frontmatter.date && new Date($page.frontmatter.date),
-                modifiedAt: $page => $page.lastUpdated && new Date($page.lastUpdated),
-            
-            }
-        }
+        ]
     ],
     markdown: {
         lineNumbers: true,
@@ -62,12 +48,7 @@ module.exports = {
                 text: 'GitHub',
                 link: 'https://github.com/Seungwoo321'
             }
-        ],
-        // sidebar: {
-        //     '/project/environment': [
-        //         ''
-        //     ]
-        // }
+        ]
     }
 }
 
