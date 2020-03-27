@@ -13,14 +13,15 @@
             <p>
                 {{ post.frontmatter.description }}
             </p>
-            <p>
+            <!-- <p>
                 <tags-list :tags="getTags(post)"></tags-list>
-            </p>
+            </p> -->
             <p>
-                <router-link to="/about">
-                    {{ post.frontmatter.author }}
+               {{ post.frontmatter.date.substring(0, 10) }} |
+                <router-link :to="post.path">
+                    <!-- {{  }} -->
+                    read more
                 </router-link>
-                | {{ post.frontmatter.date.substring(0, 10) }}
             </p>
         </div>
         <div v-if="noPost">
@@ -39,7 +40,7 @@ export default {
     },
     computed: {
         title () {
-            return this.isQuery ? this.$route.query.tag : 'Newest'
+            return this.isQuery ? this.$route.query.tag : 'All'
         },
         isQuery() {
             return !!this.$route.query.tag

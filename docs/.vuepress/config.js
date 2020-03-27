@@ -17,6 +17,9 @@ module.exports = {
             {
                 'ga': 'UA-155428271-1'
             }
+        ],
+        [
+            'vuepress-plugin-table-of-contents'
         ]
     ],
     markdown: {
@@ -34,7 +37,8 @@ module.exports = {
         nav: [
             {
                 text: 'Blog',
-                link: '/blog/'
+                link: '/blog/',
+                sidebar: 'auto'
             },
             {
                 text: 'Portfolio',
