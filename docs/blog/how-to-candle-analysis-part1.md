@@ -8,7 +8,7 @@ description: Athena SQL을 사용해서 원하는 시간의 캔들 데이터를 
 
 # Kinesis + Glue + Athena 서비스를 사용한 데이터 수집 및 캔들 데이터 생성하기
 
-![01_sql.png](/img/202104024/01_sql.png)
+![01_sql.png](/img/20210424/01_sql.png)
 
 > 이 글은 2018년 4월 8일 메모한 내용을 바탕으로 작성 되었습니다.
 
@@ -250,7 +250,7 @@ order by 1
 
 * 4시간 캔들 조회 결과
 
-![02_result.png](/img/202104024/02_result.png)
+![02_result.png](/img/20210424/02_result.png)
 
 ## 정리
 - SQL이 너무 길고 복잡하다.
