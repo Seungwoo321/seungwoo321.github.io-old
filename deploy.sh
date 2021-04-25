@@ -3,7 +3,7 @@ DATE=`date`
 set -e
 rm -rf docs/.vuepress/dist/ 
 npm run build
-cp -r static/ docs/.vuepress/dist/
+# cp -r static/ docs/.vuepress/dist/
 cd docs/.vuepress/dist/
 # echo 'blog.devstory.kr' > CNAME
 git init 
