@@ -16,8 +16,6 @@ description: 오픈소스 sinopia를 사용해서 Prvate NPM 저장소를 구성
 ## 배경 
 Vue 프레임워크 기반의 비공개 UI 템플릿을 만들게 되었는데, 이 템플릿을 사용해 개발된 프로젝트에서 수시로 업데이트된 내용이 배포 되어야 한다. 패키지 관리는 npm의 장점을 그대로 사용하고 싶어서 Private NPM 저장소를 구축하기로 했다. npm 에서 제공하는 서비스는 비용 문제가 있어서 sinopia 라는 오픈소스를 사용해서 구성 했다.
 
-<!-- ## sinopia 란?
-[깃허브 문서](https://github.com/rlidwka/sinopia)의 사용사례를 보면 나의 주목적인 `개인 패키지 사용` 외에도 `npmjs.org 레지스트리 캐시`와 `공개 패키지 재정의(버그 수정등)` 가 있고, 각 목적에 맞게  -->
 
 ## 설치 및 사용자 생성
 상세한 내용은 [Github README](https://github.com/rlidwka/sinopia)를 확인하자.

@@ -1,2 +1,0 @@
-(window["webpackJsonp"]=window["webpackJsonp"]||[]).push([["chunk-2d238a19"],{ffcf:function(e){e.exports=JSON.parse('{"type":"Topology","objects":{"scr":{"type":"GeometryCollection","geometries":[{"type":"Polygon","properties":{"name":"Scarborough Reef"},"id":"-99","arcs":[[0]]}]}},"arcs":[[[5294,9999],[4705,-5789],[-4705,-4210],[-5294,4210],[5294,5789]]],"transform":{"scale":[3.8363336334157765e-7,4.287666766665868e-7],"translate":[117.7518563810001,15.150082025000074]}}')}}]);
-//# sourceMappingURL=chunk-2d238a19.4f47b710.js.map

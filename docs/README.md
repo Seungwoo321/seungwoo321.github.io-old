@@ -1,6 +1,6 @@
 ---
 home: true
-heroImage: /20200107.jpg
+heroImage: /img/20200107/main.jpg
 heroText: Seungwoo Lee
 tagline: Front-End Engineer
 actionText: To The Blog →
