@@ -69,7 +69,7 @@ function solution(N) {
 ![03_large_case.png](/img/20210426/03_large_case.png)
 
 
-## 공부한 것
+## 기억하기
 * 진수 변환은 10진수를 변환 할 때는 Number 의 내장 함수인 `toString()` 을 사용하고 반대에는 전역함수인 `parseInt()` 함수를 사용 할 수 있다.
 * String 의 `length` 속성은 UTF-16 코드를 기준으로 문자열의 길이를 나타낸다.
 * `split` 은 string 객체를 지정한 문자열로 구분하여 여러개의 문자열로 나누는 것이다. 코드 1에서 `if (n === 1)`과 같은 실수는 조심 하자.
