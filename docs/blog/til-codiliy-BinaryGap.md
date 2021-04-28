@@ -1,12 +1,12 @@
 ---
-title: Codility - Lesson1 BinaryGab
+title: Codility - Lesson 1 BinaryGab
 author: Seungwoo Lee
 date: 2021-04-26
 tags: ["codility", "TIL"]
 description: TIL - BinaryGab을 풀면서 공부한 내용을 정리하자.
 ---
 
-# Codility - Lesson1 BinaryGab
+# Codility - Lesson 1 BinaryGab
 
 ![01_code.png](/img/20210426/01_code.png)
 
