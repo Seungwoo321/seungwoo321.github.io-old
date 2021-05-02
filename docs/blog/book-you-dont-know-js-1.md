@@ -111,7 +111,7 @@ export default {
 ```
 
 * PivotUtilities 객체의 메서드로 사용된 numberFormat() 함수는 내부 익명함수를 리턴한다. 리턴하는 내부 함수는 클로저를 형성함으로써 usFmt, usFmInt, usFmtPct 는 각각의 독립적인 렉시컬 스코프 환경을 갖게 된다.
-* 그래서 usFmt, usFmInt, usFmtPct를 실행해서 내부 함수가 호출 될 때 본래 자신의 렉시컬 스코프 환경을 기억하므로, opts 변수를 참조할 수 있게 된다.
+* usFmt, usFmInt, usFmtPct 변수에 의해서 리턴된 내부 함수가 호출 될 때 이 내부의 익명 함수는 본래 자신의 렉시컬 스코프 환경을 기억해서, opts 변수를 참조할 수 있게 된다.
 
 
 ## 참조링크
