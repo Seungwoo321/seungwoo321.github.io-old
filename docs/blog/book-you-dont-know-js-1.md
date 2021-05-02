@@ -26,7 +26,7 @@ description: 클로저 이해하기
 
 
 #### 클로저 사용 찾아보기
-* 첫 번째 인상깊은 구절을 보고 클로저를 사용한 코드를 찾아보니, vue-pivottable 의 Issues 중 #19, #38 를 해결 하면서 작성한 예제용 코드에서 클로저를 사용한 예를 찾을 수 있었다.     
+* 첫 번째 인상 깊은 구절을 보고 클로저를 사용한 코드를 찾아보니, vue-pivottable 의 Issues 중 #19, #38 를 해결 하면서 작성한 예제용 코드에서 클로저를 사용한 예를 찾을 수 있었다.     
 
 
 ./src/helper/utils.js
@@ -57,7 +57,7 @@ const numberFormat = function (optsIn) {
   }
 }
 ```
-* 내부에 정의된 x를 받는 익명 함수의 렉시컬 스코프는 글로벌, 외부함수, 내부함수가 된다.
+* 내부에 정의된 x를 받는 익명 함수의 렉시컬 스코프는 글로벌 범위, 외부함수 범위, 내부함수 범위가 된다.
 
 ./demo/example-vue-cli3/src/App.vue
 ```html{9-15}
@@ -111,7 +111,7 @@ export default {
 ```
 
 * PivotUtilities 객체의 메서드로 사용된 numberFormat() 함수는 내부 익명함수를 리턴한다. 리턴하는 내부 함수는 클로저를 형성함으로써 usFmt, usFmInt, usFmtPct 는 각각의 독립적인 렉시컬 스코프 환경을 갖게 된다.
-* 다시 usFmt, usFmInt, usFmtPct를 실행해서 내부 함수가 호출 될 때 본래 자신의 렉시컬 스코프 환경을 기억해서, opts 변수를 참조할 수 있게 된다.
+* 그래서 usFmt, usFmInt, usFmtPct를 실행해서 내부 함수가 호출 될 때 본래 자신의 렉시컬 스코프 환경을 기억하므로, opts 변수를 참조할 수 있게 된다.
 
 
 ## 참조링크
