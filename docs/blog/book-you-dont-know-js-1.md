@@ -3,7 +3,7 @@ title: 타입과 문법, 스코프와 클로저 YOU DON'T KNOW JS 책을 읽다
 author: Seungwoo Lee
 date: 2021-05-02
 tags: ["javascript", "closure", "독후감"]
-description: 타입과 문법, 스코프와 클로저 YOU DON'T KNOW JS 책을 읽다
+description: 클로저 이해하기
 ---
 
 ## 타입과 문법, 스코프와 클로저 YOU DON'T KNOW JS 책을 읽다
