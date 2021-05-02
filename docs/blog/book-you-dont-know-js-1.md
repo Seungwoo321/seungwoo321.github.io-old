@@ -32,9 +32,9 @@ description: 클로저 이해하기
 
 ./src/helper/utils.js
 ```js{12}
-/** Global */
+/** global scope */
 const numberFormat = function (optsIn) {
-  /** 외부 함수 */
+  /** outer function scope */
   const defaults = {
     digitsAfterDecimal: 2,
     scaler: 1,
@@ -45,7 +45,7 @@ const numberFormat = function (optsIn) {
   }
   const opts = Object.assign({}, defaults, optsIn)
   return function (x) {
-    /** 내부 함수 */
+    /** local scope  */
     if (isNaN(x) || !isFinite(x)) {
       return ''
     }
@@ -58,10 +58,7 @@ const numberFormat = function (optsIn) {
   }
 }
 ```
-* numberFormat() 함수의 렉시컬 스코프는 글로벌과 함수 자신의 내부이다.
-* 내부에 정의된 x를 받는 익명 함수의 렉시컬 스코프는 글로벌, 외부함수인 numberFormat, 자신의 내부이다.
-
-
+* 내부에 정의된 x를 받는 익명 함수의 렉시컬 스코프는 글로벌 범위, 외부함수 범위, 내부함수 범위가 된다.
 
 ./demo/example-vue-cli3/src/App.vue
 ```html{9-15}
@@ -114,7 +111,7 @@ export default {
 
 ```
 
-* PivotUtilities 객체의 메서드로 사용된 numberFormat() 함수는 내부 익명함수를 반환한다. 각각의 독립적인 스코프가 생성된 usFmt, usFmInt, usFmtPct 가 다시 호출 되어 내부 함수가 실행 될 때 본래 자신의 렉시컬 스코프 환경을 유지해서, opts 변수를 참조할 수 있게 된다.
+* PivotUtilities 객체의 메서드로 사용된 numberFormat() 함수는 내부 익명함수를 반환한다. 각각의 독립적인 스코프가 생성된 usFmt, usFmInt, usFmtPct 가 다시 호출 되어 내부 함수가 실행 될 때 본래 자신의 렉시컬 스코프 환경을 유지하게 되어, opts 변수를 참조할 수 있게 된다.
 
 
 
