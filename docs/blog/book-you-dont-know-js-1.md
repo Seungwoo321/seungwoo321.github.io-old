@@ -6,7 +6,11 @@ tags: ["javascript", "closure", "독후감"]
 description: 클로저 이해하기
 ---
 
+
 ## 타입과 문법, 스코프와 클로저 YOU DON'T KNOW JS 책을 읽다
+
+![happy-javasciprt.jpg](/img/20210502/happy-javasciprt.jpg)
+~~저도 기뻐요~~
 
 나는 클로저를 이해하고 있다고 생각했지만, 실제로 말로 설명이 되지 않는다는걸 깨닫고 이 책을 읽기 시작했다. 클로저 외에도 평소에 모르고 넘어 갈 수 있었던 부분에 대해 생각보다 많은 도움이 된 책이다. 이미 클로저는 수차례 반복해서 읽었지만, 이번 한번의 완독으로 끝내는 것이 아니라, 완벽하게 남을 때 까지 반복해서 읽을 생각이다.
 
@@ -26,7 +30,7 @@ description: 클로저 이해하기
 * 첫 번째 인상깊은 구절을 보고 클로저를 사용한 코드를 찾아보니, vue-pivottable 의 Issues 중 #19, #38 를 해결 하면서 작성한 예제용 코드에서 클로저를 사용한 예를 찾을 수 있었다.     
 
 
-./src/helper/utils/js
+./src/helper/utils.js
 ```js{12}
 /** Global */
 const numberFormat = function (optsIn) {
