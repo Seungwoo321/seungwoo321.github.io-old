@@ -2,7 +2,7 @@
 title: Codility - Lesson 1 BinaryGab
 author: Seungwoo Lee
 date: 2021-04-26
-tags: ["codility", "TIL"]
+tags: ["codility", "TIL", "algorithm"]
 description: TIL - BinaryGab을 풀면서 공부한 내용을 정리하자.
 ---
 
@@ -13,7 +13,7 @@ description: TIL - BinaryGab을 풀면서 공부한 내용을 정리하자.
 ## 문제 
 * https://app.codility.com/programmers/lessons/1-iterations/binary_gap/ 
 
-## 문제 요약 
+## 문제 요약
 * 숫자 N을 이진수로 변환시 1 과 1 사이의 0의 갯수가 가장 큰 경우의 길이를 구해야 한다.
 * 문제에서 주어지는 테스트 케이스는 다음과 같다. 
     - N이 9 이면 2 반환
