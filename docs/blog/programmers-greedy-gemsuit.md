@@ -1,16 +1,19 @@
 ---
-title: Programmers - Greedy 1 체육복
+title: Programmers - Greedy 1. 체육복 / javascript
 author: Seungwoo Lee
 date: 2021-05-24
 tags: ["programmers", "TIL", "algorithm"]
 description: TIL - Greedy 문제 체육복을 풀면서 공부한 내용을 정리하자.
 ---
 
-# Programmers - Greedy 1 체육복
+# Programmers - Greedy 1. 체육복 / javascript
 
 ![01.png](/img/20210524/01.png)
 
+* [풀어보기](https://programmers.co.kr/learn/courses/30/lessons/42862)
+
 ## 문제
+
 점심시간에 도둑이 들어, 일부 학생이 체육복을 도난당했습니다. 다행히 여벌 체육복이 있는 학생이 이들에게 체육복을 빌려주려 합니다. 학생들의 번호는 체격 순으로 매겨져 있어, 바로 앞번호의 학생이나 바로 뒷번호의 학생에게만 체육복을 빌려줄 수 있습니다. 예를 들어, 4번 학생은 3번 학생이나 5번 학생에게만 체육복을 빌려줄 수 있습니다. 체육복이 없으면 수업을 들을 수 없기 때문에 체육복을 적절히 빌려 최대한 많은 학생이 체육수업을 들어야 합니다.
 
 전체 학생의 수 n, 체육복을 도난당한 학생들의 번호가 담긴 배열 lost, 여벌의 체육복을 가져온 학생들의 번호가 담긴 배열 reserve가 매개변수로 주어질 때, 체육수업을 들을 수 있는 학생의 최댓값을 return 하도록 solution 함수를 작성해주세요
@@ -81,7 +84,7 @@ function solution (n, lost, reserve) {
 }
 ```
 
-## 테스트 케이스
+## 테스트
 
 |n | lost | reserve|answer
 ---|------|--------|------
@@ -94,9 +97,6 @@ function solution (n, lost, reserve) {
 |2|[2, 1]|[1, 2]|2 
 
 ## Comment
-* 잃어버린 학생 중 자신의 여벌이 있는 학생을 먼저 제외 시키는 것이 중요하다. 처음에는 한번의 반복문에서 처리하려고 해서, 테스트 케이스가 통과되지 않았으나, 여별이 있는 학생은 제외시키고 남은 학생 목록에서 앞 번호 혹은 뒷 번호에 체육복을 빌려주니 쉽게 풀렸다.
-* `while` 문으로 풀고나서 `filter`, `reduce` 도 사용해서 풀어보았다.
-* 다른 사람의 풀이를 보니, 
+* 잃어버린 학생 중 자신의 여벌이 있는 학생을 먼저 제외 시키는 것이 중요하다. 처음에는 한번의 반복문에서 처리하려고 해서, 테스트가 통과되지 않았으나, 여별이 있는 학생을 제외시키고 남은 학생 목록에서 앞 번호 혹은 뒷 번호에게 체육복을 빌려주면 쉽게 풀린다.
+* 코드1과 같이 `while` 문으로 풀고나서 코드2와 같이 `filter`, `reduce` 도 사용해서 풀어보았다.
 
-## 링크
-* https://programmers.co.kr/learn/courses/30/lessons/42862
