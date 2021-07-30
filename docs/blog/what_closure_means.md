@@ -18,7 +18,7 @@ description: 클로저 다시 햑습하기
 
 내부 함수를 리턴하는 외부 함수가 종료된 후에 내부 함수를 실행 해도 렉시컬 스코프 환경을 유지하여 실행 이전에 기억하고 있던 변수에 접근 할 수 있는 특성
 
-```jsx
+```js
 // 외부함수
 function outer () {
 	const x = 10;
@@ -68,7 +68,7 @@ console.log(carryOuter(10));
 
 예제
 
-```jsx
+```js
 // global scope
 var number = 10;
 
