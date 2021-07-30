@@ -1,6 +1,6 @@
 <template>
     <div class="flex-container">
-        <div class="flex-card" v-for="post in posts.slice(0, 3)">
+        <div class="flex-card" v-for="(post, index) in posts.slice(0, 3)" :key="index">
             <strong>
                 <router-link :to="post.path">
                     {{ post.frontmatter.title }}
@@ -41,5 +41,5 @@ export default {
     margin: 8px;
 }
 
-</style>>
+</style>
 

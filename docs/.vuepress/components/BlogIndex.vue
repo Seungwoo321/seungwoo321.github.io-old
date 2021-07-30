@@ -4,7 +4,7 @@
             <a :href="`#${title}`" class="header-anchor">#</a>
             {{ title }}
         </h1>
-        <div v-for="post in posts">
+        <div v-for="(post, index) in posts" :key="index">
             <h2>
                 <router-link :to="post.path">
                     {{ post.frontmatter.title }}
@@ -13,15 +13,19 @@
             <p>
                 {{ post.frontmatter.description }}
             </p>
-            <!-- <p>
-                <tags-list :tags="getTags(post)"></tags-list>
-            </p> -->
             <p>
-               {{ post.frontmatter.date.substring(0, 10) }} |
-                <router-link :to="post.path">
-                    <!-- {{  }} -->
-                    read more
-                </router-link>
+                <tags-list :tags="getTags(post)"></tags-list>
+            </p>
+            <p style="display:flex;justify-content:space-between">
+                <span>
+                    {{ post.frontmatter.date.substring(0, 10) }} |
+                    <router-link :to="post.path">
+                        read more
+                    </router-link>
+                </span>
+                <small style="opacity:0.5">
+                    by {{ post.frontmatter.author }}
+                </small>
             </p>
         </div>
         <div v-if="noPost">
@@ -71,4 +75,4 @@ export default {
 
 <style>
 
-</style>>
+</style>

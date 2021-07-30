@@ -1,5 +1,11 @@
 <template>
     <div class="tags-list-index">
+        <span>
+            <router-link to="/blog">
+                All
+            </router-link>
+            ({{ postAllCount }})
+        </span>
         <span v-for="(key, index) in Object.keys(tags)" :key="index">
             <router-link :to="`?tag=${key.trim()}`">
                 {{ key }}
@@ -12,9 +18,11 @@
 <script>
 export default {
     computed: {
+        postAllCount () {
+            return this.$site.pages.filter(page => page.frontmatter.tags).length
+        },
         tags () {
             return this.$site.pages.reduce((accumulator, currentValue) => {
-
                 currentValue.frontmatter.tags && currentValue.frontmatter.tags.forEach(tag => {
                     if (!accumulator[tag]) accumulator[tag] = 0
                     accumulator[tag] ++
