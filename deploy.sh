@@ -9,7 +9,7 @@ cd docs/.vuepress/dist/
 git init 
 git config --local user.name "Seungwoo Lee"
 git config --local user.email "seungwoo321@gmail.com"
-git remote add origin https://github.com/Seungwoo321/Seungwoo321.github.io.git
+git remote add origin git@github.com:Seungwoo321/vuepress-blog-project.git
 git add -A
 git commit -m "publish $DATE"
 git push -f origin master 
