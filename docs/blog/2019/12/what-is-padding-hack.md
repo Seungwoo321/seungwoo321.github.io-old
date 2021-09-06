@@ -261,7 +261,7 @@ path {
 :::
 
 <script>
-import geojson from '../.vuepress/world.json'
+import geojson from '../../../.vuepress/world.json'
 import { geoEquirectangular, geoPath } from 'd3-geo'
 export default {
   data () {
