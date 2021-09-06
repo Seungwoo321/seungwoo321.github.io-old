@@ -3,7 +3,7 @@
         <div class="flex-card" v-for="(post, index) in posts.slice(0, 3)" :key="index">
             <strong>
                 <router-link :to="post.path">
-                    {{ post.frontmatter.title }}
+                    {{ post.frontmatter.front_matter_title }}
                 </router-link>
             </strong>
             <div class="summary">

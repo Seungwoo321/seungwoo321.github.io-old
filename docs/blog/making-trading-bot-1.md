@@ -1,5 +1,5 @@
 ---
-title:  Kinesis + Glue + Athena 서비스를 사용한 데이터 수집 및 캔들 데이터 생성하기
+front_matter_title:  Kinesis + Glue + Athena 서비스를 사용한 데이터 수집 및 캔들 데이터 생성하기
 author: Seungwoo Lee
 date: 2021-04-25
 tags: ["Kinesis", "Glue", "Athena", "trading bot"]
@@ -13,26 +13,27 @@ description: 트레이딩 봇 만들기(1) Athena SQL을 사용해 원하는 시
 ![01_sql.png](/img/20210425/01_sql.png)
 ![02_result.png](/img/20210425/02_result.png)
 
-
 ## 자동매매 프로그램을 위한 시장 데이터 분석 - 1탄
 
 ### 시작하게 된 계기
+
 * 거래소가 원하는 시간 프레임의 캔들 데이터를 제공하지 않는다.
 * 거래소가 제공하지 않는 원하는 시간 프레임의 캔들 데이터는 실시간 데이터를 가공해서 만들어야 한다.
 * AWS 의 데이터 분석을 위한 서비스 Glue 와 Athena 를 사용해보자.
 
-### 필요한 데이터는 무엇인가 ? 
-* 캔들은 `종가(close), 고가(high), 저가(low), 시가(open)` 로 구성되어 있고, 다음과 같이 정리 할 수 있다. 
-    - 종가(close) = (open + high + low + close) / 4
-    - 고가(high) = highest
-    - 저가(low) = lowest
-    - 시가(open) = close of previous bar
+### 필요한 데이터는 무엇인가 ?
+
+* 캔들은 `종가(close), 고가(high), 저가(low), 시가(open)` 로 구성되어 있고, 다음과 같이 정리 할 수 있다.
+  * 종가(close) = (open + high + low + close) / 4
+  * 고가(high) = highest
+  * 저가(low) = lowest
+  * 시가(open) = close of previous bar
 
 ### 수집 및 데이터 가공
 
 * 프로세스
 
-node.js 에서 작성한 스크립트에서 코빗 거래소의 (https://api.korbit.co.kr/v1/ticker) API를 정기적으로 호출해서 종목과 가격과 시간 데이터를 Kinesis 로 전송하고 Glue 서비스를 사용해서 Athena 에 테이블을 생성 한다.
+node.js 에서 작성한 스크립트에서 코빗 거래소의 (<https://api.korbit.co.kr/v1/ticker>) API를 정기적으로 호출해서 종목과 가격과 시간 데이터를 Kinesis 로 전송하고 Glue 서비스를 사용해서 Athena 에 테이블을 생성 한다.
 
 * 문제점
 
@@ -42,10 +43,10 @@ Glue 에서 ETL 작업을 구성해서 ticker 데이터를 캔들 데이터로 �
 
 ticker 데이터를 그대로 생성한 테이블에 SQL 을 사용해서 캔들 데이터를 생성했다.
 
-
 ### Athena SQL 로 데이터 가공하기 (캔들 데이터 생성)
 
 * 5분 캔들 데이터
+
 ```SQL
 
 select
@@ -104,6 +105,7 @@ order by 1
 ```
 
 * 30분 캔들 데이터
+
 ```SQL
 select
     a1.timestamp
@@ -198,7 +200,6 @@ order by 1
 
 * 4시간 캔들 데이터
 
-
 ```SQL
 select
     a1.timestamp
@@ -249,10 +250,9 @@ order by 1
 
 ```
 
-
 ## 정리
+
 원하는 시간 프레임별로 캔들 데이터를 생성 했으나, 다음과 같은 이유로 작업에 사용한 AWS 리소스를 모두 지우고 다른 방법을 찾게 되었다.
-- 기본 캔들만 만들어서 조회하는데 복잡하고 비용이 너무 많이 든다.
-- Glue 서비스의 ticker 테이블 생성이 배치라서 실시간으로 캔들 데이터를 조회 할 수 없다
 
-
+* 기본 캔들만 만들어서 조회하는데 복잡하고 비용이 너무 많이 든다.
+* Glue 서비스의 ticker 테이블 생성이 배치라서 실시간으로 캔들 데이터를 조회 할 수 없다

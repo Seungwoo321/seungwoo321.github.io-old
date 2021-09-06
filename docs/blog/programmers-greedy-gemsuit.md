@@ -1,5 +1,5 @@
 ---
-title: Programmers - Greedy 1. 체육복 / javascript
+front_matter_title: Programmers - Greedy 1. 체육복 / javascript
 author: Seungwoo Lee
 date: 2021-05-24
 tags: ["programmers", "TIL", "algorithm"]
@@ -19,6 +19,7 @@ description: TIL - Greedy 문제 체육복을 풀면서 공부한 내용을 정�
 전체 학생의 수 n, 체육복을 도난당한 학생들의 번호가 담긴 배열 lost, 여벌의 체육복을 가져온 학생들의 번호가 담긴 배열 reserve가 매개변수로 주어질 때, 체육수업을 들을 수 있는 학생의 최댓값을 return 하도록 solution 함수를 작성해주세요
 
 ## 제한사항
+
 * 전체 학생의 수는 2명 이상 30명 이하입니다.
 * 체육복을 도난당한 학생의 수는 1명 이상 n명 이하이고 중복되는 번호는 없습니다.
 * 여벌의 체육복을 가져온 학생의 수는 1명 이상 n명 이하이고 중복되는 번호는 없습니다.
@@ -59,6 +60,7 @@ function solution(n, lost, reserve) {
 ```
 
 ### 코드2
+
 ```js
 
 function solution (n, lost, reserve) {
@@ -94,9 +96,9 @@ function solution (n, lost, reserve) {
 |12|[1, 2, 3, 5, 8, 9, 11]|[4, 2, 10]|8
 |5|[1, 5]|[3]|3
 |4|[3, 1, 2]|[2, 4, 3]|3
-|2|[2, 1]|[1, 2]|2 
+|2|[2, 1]|[1, 2]|2
 
 ## Comment
+
 * 잃어버린 학생 중 자신의 여벌이 있는 학생을 먼저 제외 시키는 것이 중요하다. 처음에는 한번의 반복문에서 처리하려고 해서, 테스트가 통과되지 않았으나, 여별이 있는 학생을 제외시키고 남은 학생 목록에서 앞 번호 혹은 뒷 번호에게 체육복을 빌려주면 쉽게 풀린다.
 * 코드1과 같이 `while` 문으로 풀고나서 코드2와 같이 `filter`, `reduce` 도 사용해서 풀어보았다.
-

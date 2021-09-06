@@ -7,7 +7,7 @@
         <div v-for="(post, index) in posts" :key="index">
             <h2>
                 <router-link :to="post.path">
-                    {{ post.frontmatter.title }}
+                    {{ post.frontmatter.front_matter_title }}
                 </router-link>
             </h2>
             <p>

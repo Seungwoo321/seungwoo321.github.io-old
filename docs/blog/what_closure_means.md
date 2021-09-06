@@ -1,5 +1,5 @@
 ---
-title: 클로저(Closure)는 무엇이며, 어떻게/왜 사용하나요 ?
+front_matter_title: 클로저(Closure)는 무엇이며, 어떻게/왜 사용하나요 ?
 author: Seungwoo Lee
 date: 2021-07-31
 tags: ["closure", "javascript"]
@@ -11,8 +11,8 @@ description: 클로저 다시 햑습하기
 [[toc]]
 
 ## 다시 학습 하기
-함수형 프로그래밍 책을 읽으면서 curring pattern 에서 사용되는 것을 보고 처음으로 클로저의 개념을 알게 되었고 다시 YOU DON'T KNOW JS 책을 읽으면서 클로저를 학습했다. 그러나 여전히 부족함을 느껴서 다시 정리 하게 되었다.
 
+함수형 프로그래밍 책을 읽으면서 curring pattern 에서 사용되는 것을 보고 처음으로 클로저의 개념을 알게 되었고 다시 YOU DON'T KNOW JS 책을 읽으면서 클로저를 학습했다. 그러나 여전히 부족함을 느껴서 다시 정리 하게 되었다.
 
 ### 무엇인가?
 
@@ -21,11 +21,11 @@ description: 클로저 다시 햑습하기
 ```js
 // 외부함수
 function outer () {
-	const x = 10;
-	// 내부함수
-	return function (y) {
-		return x * y;
-	}
+ const x = 10;
+ // 내부함수
+ return function (y) {
+  return x * y;
+ }
 }
 
 const carryOuter = outer();
@@ -43,7 +43,7 @@ console.log(carryOuter(10));
 
 ### 단점은?
 
-스코프가 종료 된 후에도 스코프 밖에서 언젠든지 호출 될 수 있도록 메모리에 계속해서 저장하고 있기 때문에 메모리 사용량이 늘어납니다. 
+스코프가 종료 된 후에도 스코프 밖에서 언젠든지 호출 될 수 있도록 메모리에 계속해서 저장하고 있기 때문에 메모리 사용량이 늘어납니다.
 
 > **클로저 해제는 null 을 대입합니다.**
 
@@ -53,14 +53,14 @@ console.log(carryOuter(10));
 
 ### 스코프(Scope)
 
-프로그래밍에서 변수에 접근 할 수 있는 유효 범위 
+프로그래밍에서 변수에 접근 할 수 있는 유효 범위
 
 - var 는 선언된 곳과 가장 가까운 함수를 유효 범위로 가집니다 (함수 스코프)
 - let, const 는 선언된 곳과 가장 가까운 블록을 유효 범위로 가집니다 (블록 스코프)
 
 ### 스코프 체인(Scope Chain)
 
-식별자를 찾을 때 자신이 속한 스코프에서 찾고 없으면 상위 스코프에서 다시 찾는 현상 입니다. 
+식별자를 찾을 때 자신이 속한 스코프에서 찾고 없으면 상위 스코프에서 다시 찾는 현상 입니다.
 
 ### 렉시컬 스코프(Lexical Scope) - 정적스코프
 
@@ -73,13 +73,13 @@ console.log(carryOuter(10));
 var number = 10;
 
 function foo () {
-	var number = 1;
-	bar();
+ var number = 1;
+ bar();
 }
 
 // local scope
 function bar () {
-	console.log(number);
+ console.log(number);
 }
 
 foo(); // ?
@@ -90,7 +90,7 @@ bar(); // ?
 
 ### 다이나믹 스코프(Dynamic Scope) - 동적스코프
 
-함수의 **호출**에 따라 상위 스코프가 정해지는 것으로 Perl, Bash Shell 에서 다이나믹 스코프를 따릅니다. 
+함수의 **호출**에 따라 상위 스코프가 정해지는 것으로 Perl, Bash Shell 에서 다이나믹 스코프를 따릅니다.
 
 예제
 
@@ -100,11 +100,11 @@ bar(); // ?
 NUMBER=10
 
 foo(){
-	NUMBER=1
-	bar
+ NUMBER=1
+ bar
 }
 bar(){
-	echo $NUMBER
+ echo $NUMBER
 }
 
 foo # ??
