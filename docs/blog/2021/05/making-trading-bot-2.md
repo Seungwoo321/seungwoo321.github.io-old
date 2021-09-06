@@ -1,18 +1,16 @@
 ---
-front_matter_title: InfluxDB 를 사용해 bot 을 만들다.
+front_matter_title: InfluxDB 를 사용한 백테스팅
 author: Seungwoo Lee
 date: 2021-05-20
-tags: ["InfluxDB", "InfluxQL", "flux", "trading bot"]
+tags: ["InfluxDB", "InfluxQL", "Trading Bot"]
 description: 트레이딩 봇 만들기(2) InlfuxDB 1.8 버전으로 캔들 데이터를 만들고 분석한 경험을 정리하자.
 ---
 
-# InfluxDB 를 사용해 bot 을 만들다
+# InfluxDB를 사용한 트레이딩 봇 만들기
 
-## 시작하게 된 계기
+## 배경
 
 이전 Kinesis + Glue + Athena SQL 로 캔들데이터 생성을 위해 어렵게 작업했던 AWS 리소스를 정리하고 다른 방법을 찾기 시작했다. 구글링을 통해서 시계열 데이터베이스 라는 것을 알게 되었다. 데이터베이스는 MySQL 와 같은 관계형 데이터 베이스, MongoDB 와 같은 NoSQL, Redis 와 같이 키 값 구조의 데이터 구조를 가진 스토어 정도 밖에 모르고 있었기에, InfluxDB 의 공식 문서를 보는 것은 아주 재미있고 신기했다.
-
-> 새로운 것을 배우고 공부하는 것은 언제나 재미있다.
 
 ## 데이터 수집 및 저장
 
