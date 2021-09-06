@@ -2,7 +2,7 @@
 front_matter_title: Backtest pseudo code
 author: Seungwoo Lee
 date: 2021-06-07
-tags: ["backtest", "grademark", "trading bot"]
+tags: ["backtest", "grademark", "Trading Bot"]
 description: 트레이딩 봇 만들기(3) grademark 의 backtest.ts 를 의사코드로 작성
 ---
 
