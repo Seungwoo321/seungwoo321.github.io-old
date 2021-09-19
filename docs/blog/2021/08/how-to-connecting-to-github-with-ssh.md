@@ -3,7 +3,7 @@ front_matter_title: SSH로 GitHub / CodeCommit 연결하기
 author: Seungwoo Lee
 date: 2021-08-16
 tags: ["git", "CodeCommit"]
-description: 비밀번호 인증 지원이 8월 13일로 종료되어서, SSH 연결로 깃허브 접속 방법을 변경한 경험을 정리합니다.
+description: 2021년 8월 13일부로 비밀번호 인증지원이 종료되어 이전에 사용하던 방식을 사용할 수 없게 되어서 이 기회에 SSH 접속 방식으로 변경 하게 되었다.
 ---
 
 # SSH로 GitHub / CodeCommit 연결하기
@@ -12,7 +12,7 @@ description: 비밀번호 인증 지원이 8월 13일로 종료되어서, SSH �
 
 ## 비밀번호 인증 지원 종료
 
-2021년 8월 13일부로 비밀번호 인증지원이 종료되어 [이전에 사용하던 방식](https://seungwoo321.github.io/blog/how-to-git-mulitple-account.html)을 사용할 수 없게 되어서 이 기회에 SSH 접속 방식으로 변경 하게 되었다.
+2021년 8월 13일부로 비밀번호 인증지원이 종료되어 [이전에 사용하던 방식](/2019/04/how-to-git-mulitple-account.html)을 사용할 수 없게 되어서 이 기회에 SSH 접속 방식으로 변경 하게 되었다.
 
 ![001.png](/img/20210816/001.png)
 

@@ -3,14 +3,18 @@ front_matter_title: 여러개의 GitHub/CodeCommit 인증정보 관리하기
 author: Seungwoo Lee
 date: 2019-04-21
 tags: ["git", "CodeCommit"]
-description: 여러개의 GitHub/CodeCommit 인증정보를 매번 입력하지 않고 원격 저장소에 접근 할 수 있다. 
+description: 이렇게 하면 단일 컴퓨터에서 여러 GItHub/CodeCommit 인증정보를 매번 입력하지 않고 HTTPS 프로토콜로 리모트 저장소에 접근 할 수 있다.
 ---
 
 # 여러개의 GitHub/CodeCommit 인증정보 관리하기
 
-* Git 도구 Credential 저장소는 HTTPS 프로토콜로 리모트 저장소에 접근할 때 인증정보를 저장해두고 자동으로 입력해주는 시스템이다.
-* Credential 저장소의 옵션 중 store 모드를 사용하여 각 프로젝트의 .git 디렉토리에 인증정보를 텍스트 파일로 저장 할 수 있다.
-* 이렇게 하면 단일 컴퓨터에서 여러 GItHub/CodeCommit 인증정보를 매번 입력하지 않고 HTTPS 프로토콜로 리모트 저장소에 접근 할 수 있다.
+:::warning
+2021년 8월 13일 부로 비밀번호 인증 지원이 종료되었습니다. 자세한 안내는 [여기](https://github.blog/2020-12-15-token-authentication-requirements-for-git-operations/)에서 관련 포스팅은 [여기](/2021/08/how-to-connecting-to-github-with-ssh.html)에서 확인 할 수 있습니다.
+:::
+
+* Git 도구 Credential 저장소는 HTTPS 프로토콜로 리모트 저장소에 접근할 때 인증정보를 저장해두고 자동으로 입력해 주는 시스템이다.
+* Credential 저장소의 옵션 중 store 모드를 사용하여 각 프로젝트의. git 디렉터리에 인증정보를 텍스트 파일로 저장할 수 있다.
+* 이렇게 하면 단일 컴퓨터에서 여러 GItHub/CodeCommit 인증정보를 매번 입력하지 않고 HTTPS 프로토콜로 리모트 저장소에 접근할 수 있다.
 
 ## 1. Windows 에서 git 커맨드 사용하기  
 
