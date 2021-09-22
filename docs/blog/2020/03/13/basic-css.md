@@ -2,7 +2,7 @@
 front_matter_title: CSS 기본 정리
 author: Seungwoo Lee
 date: 2020-03-13
-tags: ["css"]
+tags: ["CSS"]
 description: CSS 기본 정리 
 ---
 

@@ -1,15 +1,15 @@
 ---
-front_matter_title: 타입과 문법, 스코프와 클로저 YOU DON'T KNOW JS 책을 읽다
+front_matter_title: 타입과 문법, 스코프와 클로저 YOU DON'T KNOW JS 책을 읽고
 author: Seungwoo Lee
 date: 2021-05-02
-tags: ["javascript", "closure", "독후감"]
+tags: ["JavaScript", "Closure"]
 description: 클로저 이해하기
 ---
 
 
 # 타입과 문법, 스코프와 클로저 YOU DON'T KNOW JS 책을 읽다
 
-![happy-javascript.jpg](/img/20210502/happy-javascript.jpg)
+![happy-javascript.jpg](./img/happy-javascript.jpg)
 
 나는 클로저를 이해하고 있다고 생각했지만, 실제로 말로 설명이 되지 않는다는걸 깨닫고 이 책을 읽기 시작했다. 클로저 외에도 평소에 모르고 넘어 갈 수 있었던 부분에 대해 생각보다 많은 도움이 된 책이다. 이미 클로저는 수차례 반복해서 읽었지만, 이번 한번의 완독으로 끝내는 것이 아니라, 완벽하게 남을 때 까지 반복해서 읽을 생각이다.
 
@@ -24,7 +24,7 @@ description: 클로저 이해하기
 ## 클로저 사용 찾아보기
 
 * 첫 번째 인상 깊은 구절을 보고 클로저를 사용한 코드를 찾아보니,
-vue-pivottable 의 Issues 중 #19, #38 를 해결 하면서 작성한 예제용 코드에서 클로저를 사용한 예를 찾을 수 있었다.
+vue-pivottable의 Issues 중 #19, #38를 해결하면서 작성한 예제용 코드에서 클로저를 사용한 예를 찾을 수 있었다.
 
 ./src/helper/utils.js
 
@@ -56,7 +56,7 @@ const numberFormat = function (optsIn) {
 }
 ```
 
-* 내부에 정의된 x를 받는 익명 함수의 렉시컬 스코프는 글로벌 범위, 외부함수 범위, 내부함수 범위가 된다.
+* 내부에 정의된 x를 받는 익명 함수의 렉시컬 스코프는 글로벌 범위, 외부 함수 범위, 내부 함수 범위가 된다.
 
 ./demo/example-vue-cli3/src/App.vue
 
@@ -110,8 +110,8 @@ export default {
 
 ```
 
-* PivotUtilities 객체의 메서드로 사용된 numberFormat() 함수는 내부 익명함수를 리턴한다. 리턴하는 내부 함수는 클로저를 형성함으로써 usFmt, usFmInt, usFmtPct 는 각각의 독립적인 렉시컬 스코프 환경을 갖게 된다.
-* usFmt, usFmInt, usFmtPct 변수에 의해서 리턴된 내부 함수가 호출 될 때 이 내부의 익명 함수는 본래 자신의 렉시컬 스코프 환경을 기억해서, opts 변수를 참조할 수 있게 된다.
+* PivotUtilities 객체의 메서드로 사용된 numberFormat() 함수는 내부 익명 함수를 리턴한다. 리턴하는 내부 함수는 클로저를 형성함으로써 usFmt, usFmInt, usFmtPct는 각각의 독립적인 렉시컬 스코프 환경을 갖게 된다.
+* usFmt, usFmInt, usFmtPct 변수에 의해서 리턴된 내부 함수가 호출될 때 이 내부의 익명 함수는 본래 자신의 렉시컬 스코프 환경을 기억해서, opts 변수를 참조할 수 있게 된다.
 
 ## 참조링크
 

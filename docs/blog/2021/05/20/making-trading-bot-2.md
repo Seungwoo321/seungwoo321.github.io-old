@@ -2,7 +2,7 @@
 front_matter_title: InfluxDB를 활용한 주식차트 만들기
 author: Seungwoo Lee
 date: 2021-05-20
-tags: ["InfluxDB", "InfluxQL", "Trading Bot", "trading-vue-js"]
+tags: ["InfluxDB", "Trading Bot"]
 description: 지난번에는 막연히 차트의 기본이 되는 캔들(Candle) 데이터에 대한 흥미로 시작했었다면 이번에는 "실시간 시장 데이터를 분석해서 자동으로 사고파는 프로그램을 만들자"라는 구체적인 목표를 갖고 시작했다.
 ---
 

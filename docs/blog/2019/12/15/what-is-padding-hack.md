@@ -2,12 +2,12 @@
 front_matter_title: Padding Hack으로 반응형 SVG 만들기
 author: Seungwoo Lee
 date: 2019-12-15
-tags: ["svg", "css"]
+tags: ["SVG", "CSS"]
 description: Padding Hack을 이용해 SVG를 반응형으로 구현해보자
 ---
 # Padding Hack으로 반응형 SVG 만들기
 
-![vue-datamaps-example.png](/vue-datamaps-example.png)
+![vue-datamaps-example.png](./img/vue-datamaps-example.png)
 
 ## 개요
 
@@ -261,7 +261,7 @@ path {
 :::
 
 <script>
-import geojson from '../../../.vuepress/world.json'
+import geojson from './world.json'
 import { geoEquirectangular, geoPath } from 'd3-geo'
 export default {
   data () {

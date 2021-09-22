@@ -27,7 +27,7 @@ npm install
 npm run serve
 ```
 
-![vue-pivottable-demo.gif](https://seungwoo321.github.io/vue-pivottable-demo.gif)
+![vue-pivottable-demo.gif](./img/vue-pivottable-demo.gif)
 
 ## Installation
 

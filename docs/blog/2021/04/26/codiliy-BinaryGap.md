@@ -2,13 +2,13 @@
 front_matter_title: Codility - Lesson 1 BinaryGab
 author: Seungwoo Lee
 date: 2021-04-26
-tags: ["codility", "TIL", "algorithm"]
-description: TIL - BinaryGab을 풀면서 공부한 내용을 정리하자.
+tags: ["Codility", "TIL", "Algorithm"]
+description: BinaryGab 문제를 풀면서 공부한 내용을 정리하자.
 ---
 
 # Codility - Lesson 1 BinaryGab
 
-![01_code.png](/img/20210426/01_code.png)
+![01_code.png](./img/01_code.png)
 
 ## 문제
 
@@ -69,8 +69,8 @@ function solution(N) {
 * 코드1, 코드2 모두 Codility 평가에는 성능 차이 없이 Score 100으로 통과 되었다.
 * 기대와 달리 Codility 평가에서 차이가 없었지만, 코드2가 보기에 깔끔해서 더 좋다고 생각한다.
 
-![02_result.png](/img/20210426/02_result.png)
-![03_large_case.png](/img/20210426/03_large_case.png)
+![02_result.png](./img/02_result.png)
+![03_large_case.png](./img/03_large_case.png)
 
 ## 기억하기
 

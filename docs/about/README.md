@@ -2,50 +2,61 @@
 
 ---
 
-# About me
+# Seungwoo Lee | 프론트엔드 개발자
 
+<img src="./img/profile.jpeg" width="30%" height="30%" style="border-radius:50% !important">
 
-[![Blogger Badge](https://img.shields.io/badge/-Blog-FF5722?style=flat-square&logo=Blogger&logoColor=white)](https://seungwoo321.github.io/)
-[![GitHub Badge](https://img.shields.io/badge/-GitHub-181717?style=flat&logo=GitHub&logoColor=white)](https://github.com/Seungwoo321)
-[![Gmail Badge](https://img.shields.io/badge/-seungwoo321@gmail.com-EA4335?style=flat-square&logo=Gmail&logoColor=white)](mailto:seungwoo321@gmail.com)
+## Skils
 
-Hi there👋 
+* __Front-End__: Vue.js, JavaScript, HTML5, CSS3, Bootstrap, Webpack, D3.js, SVG
+* __Back-End__: Node.js,  Python, ElasticSearch, Logstash, Kibana
+* __Database__: MySQL, PostgreSQL, InfluxDB
+* __Cloud__ : AWS(EC2, ELB, AutoScaling, S3, Lambda 등)
 
-I am **frontend developer** using JavaScript and Vue.js
+## Work Experience
 
-
-
-## 💪 Skils
-[![Vue.js Badge](https://img.shields.io/badge/-Vue.js-41B883?style=flat-square&logo=Vue.js&logoColor=white)]()
-[![JavaScript Badge](https://img.shields.io/badge/-JavaScript-F7DF1E?style=flat-square&logo=JavaScript&logoColor=white)]()
-[![Node.js Badge](https://img.shields.io/badge/-Node.js-339933?style=flat-square&logo=Node.js&logoColor=white)]()
-[![HTML5 Badge](https://img.shields.io/badge/-HTML5-E34F26?style=flat-square&logo=HTML5&logoColor=white)]()
-[![CSS3 Badge](https://img.shields.io/badge/-CSS3-1572B6?style=flat-square&logo=CSS3&logoColor=white)]()
-[![Bootstrap Badge](https://img.shields.io/badge/-Bootstrap-7952B3?style=flat-square&logo=Bootstrap&logoColor=white)]()
-[![Webpack Badge](https://img.shields.io/badge/-Webpack-8DD6F9?style=flat-square&logo=Webpack&logoColor=white)]()
-[![D3.js Badge](https://img.shields.io/badge/-D3.js-FFB13B?style=flat-square&logo=D3.js&logoColor=white)]()
-[![SVG Badge](https://img.shields.io/badge/-SVG-F9A03C?style=flat-square&logo=SVG&logoColor=white)]()
-
-[![Visual_Studio_Code Badge](https://img.shields.io/badge/-Visual_Studio_Code-007ACC?style=flat&logo=VisualStudioCode&logoColor=white)]()
-[![Git Badge](https://img.shields.io/badge/-Git-F05032?style=flat&logo=Git&logoColor=white)]()
-[![Amazon AWS Badge](https://img.shields.io/badge/-Amazon_AWS-232F3E?style=flat&logo=AmazonAWS&logoColor=white)]()
-[![ElasticSearch Badge](https://img.shields.io/badge/-ElasticSearch-005571?style=flat&logo=ElasticSearch&logoColor=white)]()
-[![Logstash Badge](https://img.shields.io/badge/-Logstash-005571?style=flat&logo=Logstash&logoColor=white)]()
-[![Kibana Badge](https://img.shields.io/badge/-Kibana-005571?style=flat&logo=Kibana&logoColor=white)]()
-[![GraphQL Badge](https://img.shields.io/badge/-GraphQL-E434AA?style=flat-square&logo=GraphQL&logoColor=white)]()
-
-[![InfluxDB Badge](https://img.shields.io/badge/-InfluxDB-22ADF6?style=flat-square&logo=InfluxDB&logoColor=white)]()
-[![SQLite Badge](https://img.shields.io/badge/-SQLite-003B57?style=flat&logo=SQLite&logoColor=white)]()
-[![MySQL Badge](https://img.shields.io/badge/-MySQL-4479A1?style=flat&logo=MySQL&logoColor=white)]()
-[![PostgreSQL Badge](https://img.shields.io/badge/-PostgreSQL-4169E1?style=flat&logo=PostgreSQL&logoColor=white)]()
-
-
-<!-- ## I did
-* **Megazone Cloud** 2018.08 ~ present
-* **Megazone** 2015.02 ~ 2018.07 -->
-
+<h3>
+    Megazone & Megazone Cloud
+</h3>
+<p style="margin-bottom:0;">
+    2012년부터 국내 최초 AWS 공식 파트너사로 선정되어 국내 클라우드 시장을 선도하는 AWS 클라우드 MSP 전문기업
+</p>
+<table class="about">
+    <tbody>
+        <tr>
+            <td style="padding-left:0;">
+                <b>Frontend Developer</b><br>
+                <small>2016.04 ~ 현재</small>
+            </td>
+            <td>
+                <li>HyperBilling 웹 서비스 운영 및 유지보수</li>
+                <li>신규 프론트엔드 개발</li>
+            </td>
+        </tr>
+        <tr>
+            <td style="padding-left:0;">
+                <b>Server Engineer</b><br>
+                <small>2015.02 ~ 2016.03</small>
+            </td>
+            <td>
+                <li>개인 및 공용 호스팅 서버 관리</li>
+                <li>IDC 및 클라우드 서버 모니터링</li>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<style>
+table.about tr,
+table.about td {
+    border: none;
+}
+table.about tr:nth-child(2n) {
+    background-color: #fff;
+}
+</style>
 
 ## Certifications
+
 <div style="display:block;content:'';clear:both;padding:0.5rem;"></div>
 <div
     data-iframe-width="150"
@@ -62,9 +73,13 @@ I am **frontend developer** using JavaScript and Vue.js
 </div>
 <script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
 
-
-
-
 <!-- [![AWS Certified Solutions Architect – Associate](https://images.credly.com/size/340x340/images/4bc21d8b-4afe-4fbd-9a90-a9de8bf7b240/AWS-SolArchitect-Associate-2020.png)](https://www.credly.com/badges/a7028ea2-c50c-4444-90d7-9c0b124253a1/public_url)
 [![AWS Certified Developer – Associate](https://images.credly.com/size/340x340/images/598f6ac6-2dbd-4394-8ae4-943b2f4c43ea/AWS-Developer-Associate-2020.png)](https://www.credly.com/badges/3a1147d3-61a2-4c44-bb43-8f5d502fec0e/public_url) -->
 
+## SNS
+
+[![Blogger Badge](https://img.shields.io/badge/-Blog-FF5722?style=flat-square&logo=Blogger&logoColor=white)](https://seungwoo321.github.io/)
+[![GitHub Badge](https://img.shields.io/badge/-GitHub-181717?style=flat&logo=GitHub&logoColor=white)](https://github.com/Seungwoo321)
+[![Gmail Badge](https://img.shields.io/badge/-seungwoo321@gmail.com-EA4335?style=flat-square&logo=Gmail&logoColor=white)](mailto:seungwoo321@gmail.com)
+
+ <!-- <img src="./img/fire.png" style="width:100px; height:100px;"> -->

@@ -5,7 +5,6 @@ module.exports = {
             searchMaxSuggestions: 10
         }],
         [require('./plugins/vuepress-plugin-demo-block.js')],
-        ['@vuepress/last-updated'],
         ['@vuepress/back-to-top'],
         ['@vuepress/nprogress'],
         ['@vuepress/pwa', {
@@ -33,23 +32,21 @@ module.exports = {
     },
     themeConfig: {
         theme: '@vuepress/vue',
-        lastUpdated: 'Last Updated',
         nav: [
             {
-                text: 'Blog',
-                link: '/blog/',
-                sidebar: 'auto'
+                text: 'TECH',
+                link: '/'
             },
             {
-                text: 'Portfolio',
+                text: 'PORTFOLIO',
                 link: '/portfolio/'
             },
             {
-                text: 'About',
+                text: 'ABOUT',
                 link: '/about/'
             },
             {
-                text: 'GitHub',
+                text: 'GITHUB',
                 link: 'https://github.com/Seungwoo321'
             }
         ]

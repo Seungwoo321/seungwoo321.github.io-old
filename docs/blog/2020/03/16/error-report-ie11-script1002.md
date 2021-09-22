@@ -2,7 +2,7 @@
 front_matter_title: IE 11 Syntax Error - Script1002
 author: Seungwoo Lee
 date: 2020-03-16
-tags: ["ie"]
+tags: ["IE", "trouble shooting"]
 description: Internet Explorer 11 에서 Script1002 에러를 경험하고 해결한 내용을 정리 한다.
 ---
 

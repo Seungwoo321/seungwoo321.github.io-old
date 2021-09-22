@@ -83,7 +83,7 @@ export default {
 
 ## Example
 
-![vue-datamaps-demo-basic.png](https://seungwoo321.github.io/vue-datamaps-demo-basic.png)
+![vue-datamaps-demo-basic.png](./img/vue-datamaps-demo-basic.png)
 
 ```vue
 <template>
@@ -107,7 +107,7 @@ export default {
 </style>
 ```
 
-![vue-datamaps-demo-state-label.png](https://seungwoo321.github.io/vue-datamaps-demo-state-label.png)
+![vue-datamaps-demo-state-label.png](./img/vue-datamaps-demo-state-label.png)
 
 ```vue
 <template>
@@ -370,7 +370,7 @@ export default {
 
 ```
 
-![vue-datamaps-demo-bubbles.png](https://seungwoo321.github.io/vue-datamaps-demo-bubbles.png)
+![vue-datamaps-demo-bubbles.png](./img/vue-datamaps-demo-bubbles.png)
 
 ```vue
 <template>
@@ -478,7 +478,7 @@ export default {
 
 ```
 
-![vue-datamaps-demo-arcs.png](https://seungwoo321.github.io/vue-datamaps-demo-arcs.png)
+![vue-datamaps-demo-arcs.png](./img/vue-datamaps-demo-arcs.png)
 
 ```vue
 <template>
@@ -585,7 +585,7 @@ export default {
 
 ```
 
-![vue-datamaps-demo-graticules.png](https://seungwoo321.github.io/vue-datamaps-demo-graticules.png)
+![vue-datamaps-demo-graticules.png](./img/vue-datamaps-demo-graticules.png)
 
 ```vue
 <template>
@@ -664,7 +664,7 @@ export default {
 </style>
 ```
 
-![vue-datamaps-demo-zoom.png](https://seungwoo321.github.io/vue-datamaps-demo-zoom.png)
+![vue-datamaps-demo-zoom.png](./img/vue-datamaps-demo-zoom.png)
 
 ```vue
 <template>
@@ -773,7 +773,7 @@ export default {
 </style>
 ```
 
-![vue-datamaps-demo-south-korea.png](https://seungwoo321.github.io/vue-datamaps-demo-south-korea.png)
+![vue-datamaps-demo-south-korea.png](./img/vue-datamaps-demo-south-korea.png)
 
 ```vue
 <template>
@@ -844,7 +844,7 @@ export default {
 </style>
 ```
 
-![vue-datamaps-demo-custom-color.png](https://seungwoo321.github.io/vue-datamaps-demo-custom-color.png)
+![vue-datamaps-demo-custom-color.png](./img/vue-datamaps-demo-custom-color.png)
 
 ```vue
 <template>
@@ -915,7 +915,7 @@ export default {
 </style>
 ```
 
-![vue-datamaps-demo-aws-region.png](https://seungwoo321.github.io/vue-datamaps-demo-aws-region.png)
+![vue-datamaps-demo-aws-region.png](./img/vue-datamaps-demo-aws-region.png)
 
 ```vue
 <template>

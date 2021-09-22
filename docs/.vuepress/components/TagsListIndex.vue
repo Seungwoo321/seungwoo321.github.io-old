@@ -1,7 +1,7 @@
 <template>
     <div class="tags-list-index">
         <span>
-            <router-link to="/blog">
+            <router-link to="/">
                 All
             </router-link>
             ({{ postAllCount }})

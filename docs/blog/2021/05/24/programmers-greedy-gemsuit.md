@@ -2,13 +2,13 @@
 front_matter_title: Programmers - Greedy 1. 체육복 / javascript
 author: Seungwoo Lee
 date: 2021-05-24
-tags: ["programmers", "TIL", "algorithm"]
-description: TIL - Greedy 문제 체육복을 풀면서 공부한 내용을 정리하자.
+tags: ["Programmers", "TIL", "Algorithm"]
+description: 체육복 문제를 풀면서 공부한 내용을 정리하자.
 ---
 
 # Programmers - Greedy 1. 체육복 / javascript
 
-![01.png](/img/20210524/01.png)
+![01.png](./img/01.png)
 
 * [풀어보기](https://programmers.co.kr/learn/courses/30/lessons/42862)
 

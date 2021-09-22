@@ -29,7 +29,9 @@
             </p>
         </div>
         <div v-if="noPost">
-            No post.
+            <p>
+                No post.
+            </p>
         </div>
     </div>
 </template>
