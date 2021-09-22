@@ -1,5 +1,8 @@
 module.exports = {
     title: "SEUNGWOO's TECH LOG",
+    head: [
+        ['link', { rel: 'icon', href: '/fire.png' }]
+    ],
     plugins: [
         ['@vuepress/search', {
             searchMaxSuggestions: 10
