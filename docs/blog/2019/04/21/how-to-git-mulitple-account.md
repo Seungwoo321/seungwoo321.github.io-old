@@ -9,7 +9,7 @@ description: 이렇게 하면 단일 컴퓨터에서 여러 GItHub/CodeCommit �
 # 여러개의 GitHub/CodeCommit 인증정보 관리하기
 
 :::warning
-2021년 8월 13일 부로 비밀번호 인증 지원이 종료되었습니다. 자세한 안내는 [여기](https://github.blog/2020-12-15-token-authentication-requirements-for-git-operations/)에서 관련 포스팅은 [여기](/2021/08/how-to-connecting-to-github-with-ssh.html)에서 확인 할 수 있습니다.
+2021년 8월 13일 부로 비밀번호 인증 지원이 종료되었습니다. 자세한 안내는 [여기](https://github.blog/2020-12-15-token-authentication-requirements-for-git-operations/)에서 관련 포스팅은 [여기](/blog/2021/08/16/how-to-connecting-to-github-with-ssh.html)에서 확인 할 수 있습니다.
 :::
 
 * Git 도구 Credential 저장소는 HTTPS 프로토콜로 리모트 저장소에 접근할 때 인증정보를 저장해두고 자동으로 입력해 주는 시스템이다.
