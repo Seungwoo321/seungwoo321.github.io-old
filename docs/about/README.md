@@ -25,7 +25,7 @@
     <tbody>
         <tr>
             <td style="padding-left:0;">
-                <b>Frontend Developer</b><br>
+                <b>Frontend Engineer</b><br>
                 <small>2016.04 ~ 현재</small>
             </td>
             <td>
