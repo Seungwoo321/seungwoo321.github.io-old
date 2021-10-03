@@ -2,7 +2,7 @@
 front_matter_title: 자동매매 알고리즘 개발과 트레이딩 봇 실전 6개월
 author: Seungwoo Lee
 date: 2021-06-07
-tags: ["Trading Bot"]
+tags: ["Trading Bot", "TypeScript"]
 description: 2017년 1월부터 2020년 10월까지의 비트코인 차트에 이동 평균선(Moving Average), 스토캐스틱(Stochastic), 볼린저 밴드(Bollinger Band) 지표를 사용해서 조건을 이리저리 바꿔가며 다양하게 알고리즘을 시험해 보았다.
 ---
 
