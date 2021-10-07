@@ -31,6 +31,9 @@ module.exports = {
         ],
         [
             'vuepress-plugin-table-of-contents'
+        ],
+        [
+            '@vuepress/html-redirect'
         ]
     ],
     markdown: {
