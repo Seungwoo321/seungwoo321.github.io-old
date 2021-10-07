@@ -63,7 +63,7 @@ export default {
             return page.path.startsWith(`/${this.category}/`) && !page.frontmatter.index
         },
         tagFilter (page) {
-            return this.isQuery ? page.frontmatter.tags && page.frontmatter.tags.indexOf(this.$route.query.tag) > -1 : true
+            return this.isQuery ? page.frontmatter.tags && (page.frontmatter.tags.indexOf(this.$route.query.tag) > -1 || page.frontmatter.tags.map(tag => tag.toLowerCase()).indexOf(this.$route.query.tag) > -1) : true
         },
         sort (a, b) {
             return new Date(b.frontmatter.date) - new Date(a.frontmatter.date)

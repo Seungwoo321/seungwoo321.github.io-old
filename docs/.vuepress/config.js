@@ -4,19 +4,28 @@ module.exports = {
         ['link', { rel: 'icon', href: '/fire.png' }]
     ],
     plugins: [
-        ['@vuepress/search', {
-            searchMaxSuggestions: 10
-        }],
-        [require('./plugins/vuepress-plugin-demo-block.js')],
-        ['@vuepress/back-to-top'],
-        ['@vuepress/nprogress'],
-        ['@vuepress/pwa', {
-            serviceWorker: true,
-            updatePopup: true
-        }],
         [
-            '@vuepress/google-analytics',
-            {
+            '@vuepress/search', {
+                searchMaxSuggestions: 10
+            }
+        ],
+        [
+            require('./plugins/vuepress-plugin-demo-block.js')
+        ],
+        [
+            '@vuepress/back-to-top'
+        ],
+        [
+            '@vuepress/nprogress'
+        ],
+        [
+            '@vuepress/pwa', {
+                serviceWorker: true,
+                updatePopup: true
+            }
+        ],
+        [
+            '@vuepress/google-analytics', {
                 'ga': 'UA-155428271-1'
             }
         ],

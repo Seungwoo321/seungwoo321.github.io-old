@@ -6,7 +6,6 @@ export default ({
     siteData // site metadata
 }) => {
     const { routes } = router.options
-
     routes.unshift({
         name: 'google-site-verification',
         path: '/google603171b62dec4aac.html'
