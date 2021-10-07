@@ -33,9 +33,9 @@ module.exports = {
             'vuepress-plugin-table-of-contents'
         ],
         [
-            ['@vuepress/html-redirect', {
+            '@vuepress/html-redirect', {
                 duration: 0
-            }]
+            }
         ]
     ],
     markdown: {
