@@ -4,32 +4,36 @@
             <a :href="`#${title}`" class="header-anchor">#</a>
             {{ title }}
         </h1>
-        <div v-if="noPost">
-            <p>
-                No post.
-            </p>
-        </div>
-        <div v-else
-            v-for="(post, index) in posts"
-            :key="index"
-        >
+        <div v-for="(post, index) in posts" :key="index">
             <h2>
                 <router-link :to="post.path">
                     {{ post.frontmatter.front_matter_title }}
                 </router-link>
             </h2>
-            <p>
-                <a :href="`${post.path}`">
-                    <img :src="post.frontmatter.thumbnail || defaultThumbnail" alt="post-thumbnail" width="960px">
-                </a>
-                {{ post.frontmatter.description }}
-            </p>
-            <p>
-                <tags-list :tags="getTags(post)"></tags-list>
-            </p>
-            <p style="display:flex;justify-content:space-between">
+            <div class="post-container">
+                <div class="post-container-item">
+                    <a :href="`${post.path}`">
+                        <img :src="post.frontmatter.thumbnail || defaultThumbnail" alt="post-thumbnail">
+                    </a>
+                </div>
+                <div class="post-container-item">
+                    <div>
+                        <p>
+                            {{ post.frontmatter.description }}
+                        </p>
+                        <p>
+                            <tags-list :tags="getTags(post)"></tags-list>
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+            <p style="display:flex;justify-content:space-between;">
                 <span>
-                    {{ post.frontmatter.date.substring(0, 10) }} |
+                    <small>
+                        {{ post.frontmatter.date.substring(0, 10) }}
+                    </small>
+                    |
                     <router-link :to="post.path">
                         read more
                     </router-link>
@@ -37,6 +41,11 @@
                 <small style="opacity:0.5">
                     by {{ post.frontmatter.author }}
                 </small>
+            </p>
+        </div>
+        <div v-if="noPost">
+            <p>
+                No post.
             </p>
         </div>
     </div>
@@ -87,5 +96,33 @@ export default {
 </script>
 
 <style>
+.post-container {
+    display: flex;
+}
+.post-container-item  {
+    flex: 1 1 0;
+}
+.post-container-item:last-child  {
+    padding-left: 1rem;
+}
+.post-container-item:last-child p {
+     margin-top: 0px;
+}
+@media (max-width: 575.98px) {
+    .post-container {
+        display: block;
+    }
+    .post-container-item:last-child  {
+        padding: 0;
+    }
+    .post-container-item:last-child p {
+        margin-top: 16px;
+    }
+}
 
+/* @media (max-width: 767.98px) { ... }
+
+@media (max-width: 991.98px) { ... }
+
+@media (max-width: 1199.98px) { ... } */
 </style>
