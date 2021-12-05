@@ -4,6 +4,7 @@ author: Seungwoo Lee
 date: 2021-08-16
 tags: ["git", "CodeCommit"]
 description: 2021년 8월 13일부로 비밀번호 인증지원이 종료되어 이전에 사용하던 방식을 사용할 수 없게 되어서 이 기회에 SSH 접속 방식으로 변경 하게 되었다.
+thumbnail: /thumb/20210816.png
 ---
 
 # SSH로 GitHub / CodeCommit 연결하기

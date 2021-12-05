@@ -4,12 +4,13 @@ author: Seungwoo Lee
 date: 2021-05-02
 tags: ["JavaScript", "Closure"]
 description: 클로저 이해하기
+thumbnail: /thumb/20210502.jpg
 ---
 
 
 # 타입과 문법, 스코프와 클로저 YOU DON'T KNOW JS 책을 읽다
 
-![happy-javascript.jpg](./img/happy-javascript.jpg)
+<!-- ![happy-javascript.jpg](./img/happy-javascript.jpg) -->
 
 나는 클로저를 이해하고 있다고 생각했지만, 실제로 말로 설명이 되지 않는다는걸 깨닫고 이 책을 읽기 시작했다. 클로저 외에도 평소에 모르고 넘어 갈 수 있었던 부분에 대해 생각보다 많은 도움이 된 책이다. 이미 클로저는 수차례 반복해서 읽었지만, 이번 한번의 완독으로 끝내는 것이 아니라, 완벽하게 남을 때 까지 반복해서 읽을 생각이다.
 

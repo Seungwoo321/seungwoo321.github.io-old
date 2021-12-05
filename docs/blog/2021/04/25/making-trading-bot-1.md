@@ -4,6 +4,7 @@ author: Seungwoo Lee
 date: 2021-04-25
 tags: ["Athena", "SQL", "Trading Bot"]
 description: 처음 계획은 노드(node.js)로 코빗 거래소의 ticker API를 정기적으로 호출해서 받은 시장 데이터 중 종목, 가격, 시간 데이터만 키네시스(Kinesis) 서비스로 전송하고 그다음 글루(Glue) 서비스로 ETL 작업을 수행해서 데이터를 가공해 아테나(Athena)에 최종 캔들 테이블을 생성하는 것이었다.
+thumbnail: /thumb/20210425.png
 ---
 
 # Amazon Athena SQL로 캔들 데이터 생성 하기

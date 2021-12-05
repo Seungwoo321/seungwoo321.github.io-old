@@ -19,13 +19,13 @@ span.tag {
     padding: 5px;
     border-radius: 7px;
     font-size: small;
-    background: #3eaf7c;
+    background: rgb(245, 245, 245);
     margin-right: 5px;
     color: #fff;
     font-weight: 500;
     margin-top: 5px;
 }
 span.tag a {
-    color: #fff;
+    color: #3eaf7c;
 }
 </style>

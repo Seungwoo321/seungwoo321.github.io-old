@@ -4,6 +4,7 @@ author: Seungwoo Lee
 date: 2020-02-02
 tags: ["NPM"]
 description: 오픈소스 sinopia를 사용해서 Prvate NPM 저장소를 구성하고 스코프 문제를 해결한 경험을 정리하자.
+thumbnail: /thumb/20200202.png
 ---
 
 # 비공개 NPM 저장소 구성하기
