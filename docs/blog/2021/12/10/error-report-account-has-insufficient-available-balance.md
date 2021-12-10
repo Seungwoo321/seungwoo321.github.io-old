@@ -16,7 +16,7 @@ description: 토이 프로젝트로 진행 중인 트레이딩 봇의 로그에 
 
 ## 원인
 
-처음 개발 당시 `GET /api/v1/user/wallet? currency=XBt`의 지갑 잔고 데이터를 사용해서 수량을 계산했는데 원치 않는 수량이 계산되어 낭패를 본 경험이 있습니다. 지갑 잔고는 입금액 - 출금액 + 실현 손익이고 매일 12:00 UTC마다 해당 시까지의 실현 손익을 의미합니다.
+처음 개발 당시 수량 계산에 `GET /api/v1/user/wallet?currency=XBt`의 API를 호출해서 지갑 잔고 데이터를 사용했는데 원치 않는 수량이 계산되어 낭패를 본 경험이 있습니다. 지갑 잔고는 입금액 - 출금액 + 실현 손익이고 매일 12:00 UTC마다 해당 시까지의 실현 손익을 의미합니다.
 
 > Your margin available for new positions. Available Balance = Margin Balance - Order Margin - Position Margin.
 
