@@ -1,15 +1,14 @@
 ---
-front_matter_title: 레드마인 설치기
+front_matter_title: How to Install Redmine on Amazon Linux2 OS
 author: Seungwoo Lee
 date: 2022-01-20
 tags: ["CodeCommit", "Git", "Redmine"]
-description: AWS 코드 커밋(CodeCommit)에 구성된 여러 프로젝트들의 이슈 추적과 코드 리뷰를 위해 레드 마인(Redmine)을 EC2 인스턴스에 설치하는 과정에 대한 기록과 이에 대한 후기입니다.
-
+description: AWS 코드 커밋(CodeCommit)에 구성된 모든 프로젝트들의 이슈 추적과 코드 리뷰 등을 위해 레드마인(Redmine)을 Amazon Linux2 OS에  설치하는 과정에 대한 기록과 이에 대한 후기입니다.
 ---
 
-# 레드마인 설치기
+# How to Install Redmine on Amazon Linux2 OS
 
-AWS 코드 커밋(CodeCommit)에 구성된 여러 프로젝트들의 이슈 추적과 코드 리뷰를 위해 레드마인(Redmine)을 EC2 인스턴스에 설치하는 과정에 대한 기록과 이에 대한 후기입니다.
+AWS 코드 커밋(CodeCommit)에 구성된 모든 프로젝트들의 이슈 추적과 코드 리뷰 등을 위해 레드마인(Redmine)을 Amazon Linux2 OS에  설치하는 과정에 대한 기록과 이에 대한 후기입니다.
 
 ## 인프라 구성
 
