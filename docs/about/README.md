@@ -29,7 +29,7 @@
                 <small>2016.04 ~ 현재</small>
             </td>
             <td>
-                <li>레거시 코드 리팩토링을</li>
+                <li>레거시 코드 리팩토링</li>
                 <li>HyperBilling 웹 서비스 운영 및 유지보수 담당</li>
                 <li>HyperBilling 업데이트 버전 프론트엔드 개발 담당</li>
             </td>
