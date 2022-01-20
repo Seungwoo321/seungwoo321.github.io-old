@@ -29,8 +29,9 @@
                 <small>2016.04 ~ 현재</small>
             </td>
             <td>
-                <li>HyperBilling 웹 서비스 운영 및 유지보수</li>
-                <li>신규 프론트엔드 개발</li>
+                <li>레거시 코드 리팩토링을</li>
+                <li>HyperBilling 웹 서비스 운영 및 유지보수 담당</li>
+                <li>HyperBilling 업데이트 버전 프론트엔드 개발 담당</li>
             </td>
         </tr>
         <tr>
@@ -65,7 +66,7 @@ table.about tr:nth-child(2n) {
     data-share-badge-host="https://www.credly.com">
 </div>
 <script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
-<div 
+<div
     data-iframe-width="150"
     data-iframe-height="270"
     data-share-badge-id="a7028ea2-c50c-4444-90d7-9c0b124253a1"
