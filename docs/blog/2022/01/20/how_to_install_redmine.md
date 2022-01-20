@@ -150,7 +150,7 @@ sudo /opt/nginx/sbin/nginx
 sudo pkill -9 nginx
 ```
 
-## 기타 추가 설치 및 설정
+## 기타 설정
 
 ### 레드마인 플러그인 설치
 
@@ -161,9 +161,9 @@ sudo pkill -9 nginx
 rake redmine:plugins:migrate RAILS_ENV=production
 ```
 
-### 이메일 설정하기
+### 이메일 서버 설정하기
 
-config 폴더에 있는 예제 파일을 복사 하고 sendmail 서비스를 사용하려는 경우 공식문서를 참고해 관련 설정을 추가합니다.
+config 폴더에 있는 예제 파일을 복사하고 sendmail 서비스를 사용하는 설정을 추가합니다. 다른 메일 서버를 설정하려는 경우 공식 문서를 참고해 주세요.
 
 ```bash
 cp configuration.yml.example configuration.yml
