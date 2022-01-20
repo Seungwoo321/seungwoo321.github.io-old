@@ -88,9 +88,8 @@ rbenv rehash
 # install 
 wget https://www.redmine.org/releases/redmine-4.2.3.tar.gz
 tar xvfz redmine-4.2.3.tar.gz
-# mv redmine-4.2.3 /var/www/
-# export REDMINE=/var/www/redmine-4.2.3
-export REDMINE=/home/ec2-user/redmine-4.2.3
+mv redmine-4.2.3 /var/www/
+export REDMINE=/var/www/redmine-4.2.3
 cd $REDMINE
 
 # database 연결 설정
