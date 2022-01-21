@@ -2,7 +2,7 @@
 front_matter_title: leetcodes Dynamic Programming - Fibonacci Number / javascript
 author: Seungwoo Lee
 date: 2022-01-21
-tags: ["Algorithm"]
+tags: ["Algorithm", "leetcode"]
 description: leetcode의 StudyPlan Dynamic Programming I - Day 1의 문제 Fibonacci Number의 풀이입니다. 재귀로 먼저 풀고 파라미터를 추가하는 요령으로 메모이제이션 기법(Memoization)을 적용해 보았습니다.
 ---
 
