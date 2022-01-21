@@ -3,3 +3,4 @@ docs/.vuepress/dist
 .history
 .git
 .DS_Store
+queue
