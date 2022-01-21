@@ -134,6 +134,16 @@
   <priority>0.80</priority>
 </url>
 <url>
+  <loc>https://seungwoo321.github.io/blog/2022/01/22/dp-study-plan-day1-02.html</loc>
+  <lastmod>2022-01-22T00:00:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://seungwoo321.github.io/blog/2022/01/21/dp-study-plan-day1-01.html</loc>
+  <lastmod>2022-01-21T00:00:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
   <loc>https://seungwoo321.github.io/blog/2022/01/20/how_to_install_redmine.html</loc>
   <lastmod>2022-01-20T13:53:24+00:00</lastmod>
   <priority>0.80</priority>
@@ -228,51 +238,4 @@
   <lastmod>2022-01-20T13:53:24+00:00</lastmod>
   <priority>0.80</priority>
 </url>
-<url>
-  <loc>https://seungwoo321.github.io/vue-pivottable/</loc>
-  <lastmod>2022-01-07T12:00:07+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://seungwoo321.github.io/vue-pivottable/guide/</loc>
-  <lastmod>2022-01-07T12:00:07+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://seungwoo321.github.io/vue-pivottable/props/</loc>
-  <lastmod>2022-01-07T12:00:07+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://seungwoo321.github.io/vue-pivottable/styling/</loc>
-  <lastmod>2022-01-07T12:00:07+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://seungwoo321.github.io/vue-pivottable/guide/getting-started.html</loc>
-  <lastmod>2022-01-07T12:00:07+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://seungwoo321.github.io/vue-pivottable/guide/locale.html</loc>
-  <lastmod>2022-01-07T12:00:07+00:00</lastmod>
-  <priority>0.41</priority>
-</url>
-<url>
-  <loc>https://seungwoo321.github.io/vue-pivottable/guide/slot.html</loc>
-  <lastmod>2022-01-07T12:00:07+00:00</lastmod>
-  <priority>0.41</priority>
-</url>
-<url>
-  <loc>https://seungwoo321.github.io/vue-pivottable/guide/scoped-slot.html</loc>
-  <lastmod>2022-01-07T12:00:07+00:00</lastmod>
-  <priority>0.41</priority>
-</url>
-<url>
-  <loc>https://seungwoo321.github.io/vue-pivottable/guide/utilities.html</loc>
-  <lastmod>2022-01-07T12:00:07+00:00</lastmod>
-  <priority>0.41</priority>
-</url>
-
-
 </urlset>
