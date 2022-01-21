@@ -73,6 +73,5 @@ var fib = function(n, memo = {}) {
         memo[n] = fib(n - 2, memo) + fib(n - 1, memo);    
     } 
     return memo[n];
-    
 };
 ```
