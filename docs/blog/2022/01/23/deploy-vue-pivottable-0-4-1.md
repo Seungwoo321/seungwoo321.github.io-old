@@ -2,7 +2,7 @@
 front_matter_title: VuePivottable v0.4.1 무엇이 달라졌나
 author: Seungwoo Lee
 date: 2022-01-23
-tags: ["vue-pivottable"]
+tags: ["vue-pivottable", "Vue"]
 description: 이번에는 슬롯(slot)과 스콥-슬롯(scoped-slot) 사용과 TableRenderer.js를 활용하는 예제를 추가했습니다. 관련 내용을 기억하기 위해 정리했습니다.
 ---
 
