@@ -2,7 +2,7 @@
 front_matter_title: 이벤트 위임(Event Delegation)
 author: Seungwoo Lee
 date: 2022-01-29
-tags: ["Frontend"]
+tags: ["Frontend", "JavaScript"]
 description: DOM의 이벤트 버블링(Event Bubbling) 특성을 활용해 이벤트 리스너를 하위 요소에 추가하는 대신 상위 요소에 추가하는 기법입니다.
 ---
 

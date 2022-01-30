@@ -2,11 +2,10 @@
 front_matter_title: 타입과 문법, 스코프와 클로저 YOU DON'T KNOW JS 책을 읽고
 author: Seungwoo Lee
 date: 2021-05-02
-tags: ["JavaScript", "Closure"]
+tags: ["Frontend", "JavaScript", "Closure"]
 description: 클로저 이해하기
 thumbnail: /thumb/20210502.jpg
 ---
-
 
 # 타입과 문법, 스코프와 클로저 YOU DON'T KNOW JS 책을 읽다
 

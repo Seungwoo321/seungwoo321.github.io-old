@@ -2,8 +2,8 @@
 front_matter_title: 클로저(Closure)는 무엇이며, 어떻게/왜 사용하나요 ?
 author: Seungwoo Lee
 date: 2021-07-31
-tags: ["Closure", "JavaScript"]
-description: 클로저 다시 햑습하기
+tags: ["Frontend", "JavaScript", "Closure"]
+description: 클로저를 이해 하기 위해서 Scope, Scope Chain, Context 에 대한 이해가 선행되어야 합니다.
 ---
 
 # 클로저(Closure)는 무엇이며, 어떻게/왜 사용하나요 ?

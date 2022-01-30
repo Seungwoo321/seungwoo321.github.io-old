@@ -2,7 +2,7 @@
 front_matter_title: 자바스크립트의 동작원리
 author: Seungwoo Lee
 date: 2022-01-19
-tags: ["JavaScript"]
+tags: ["Frontend", "JavaScript"]
 description: 자바스크립트 엔진, 런타임, 호출 스택, 이벤트 루프를 간단하게 정리했습니다.
 ---
 

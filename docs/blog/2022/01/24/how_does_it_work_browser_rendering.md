@@ -2,7 +2,7 @@
 front_matter_title: 브라우저 렌더링 과정
 author: Seungwoo Lee
 date: 2022-01-24
-tags: ["JavaScript"]
+tags: ["Frontend", "JavaScript"]
 description: 브라우저 렌더링 과정은 크게 다음 4단계로 설명 할 수 있습니다.
 ---
 
