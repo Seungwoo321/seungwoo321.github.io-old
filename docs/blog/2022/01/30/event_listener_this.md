@@ -14,7 +14,7 @@ description: 이벤트를 핸들러 내부의 this를 예제로 정리해보자.
 
 ### 익명 함수의 this
 
-addEventListener()의 이벤트 핸들러가 모든 전통적인 자바스크립트 함수이면 동작한 요소의 참조를 나타냅니다.
+addEventListener()의 이벤트 핸들러가 전통적인 자바스크립트 함수이면 동작한 요소의 참조를 나타냅니다.
 
 <iframe width="100%" height="150" src="//jsfiddle.net/seungwoo321/b9vz06ao/embedded/result/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
 
