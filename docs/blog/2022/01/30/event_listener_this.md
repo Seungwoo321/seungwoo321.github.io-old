@@ -39,3 +39,7 @@ addEventListener() 에 따라 this값을 바인딩하는 핸들러 함수로 래
 함수를 호출한 방법에 의해 결정되어 Window 전역 객체에 대한 참조를 나타냅니다. (엄격 모드이면 `undefined`)
 
 <iframe width="100%" height="150" src="//jsfiddle.net/seungwoo321/fetypau7/embedded/result/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
+
+## 참조링크
+
+* <https://developer.mozilla.org/ko/docs/Web/API/EventTarget/addEventListener>
