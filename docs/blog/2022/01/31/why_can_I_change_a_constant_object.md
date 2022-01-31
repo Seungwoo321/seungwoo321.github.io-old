@@ -30,7 +30,7 @@ JavaScript에서는 숫자(Number)나 문자열(String)과 같은 원시 타입(
 
 > 출처: <https://v3.ko.vuejs.org/guide/composition-api-introduction.html#ref%E1%84%80%E1%85%A1-%E1%84%8B%E1%85%B5%E1%86%BB%E1%84%82%E1%85%B3%E1%86%AB-%E1%84%87%E1%85%A1%E1%86%AB%E1%84%8B%E1%85%B3%E1%86%BC%E1%84%89%E1%85%A5%E1%86%BC-%E1%84%87%E1%85%A7%E1%86%AB%E1%84%89%E1%85%AE>
 
-## 할 수 있는 것 vs 할 수 없는 것
+## 할 수 있는 것과 할 수 없는 것
 
 **다음을 할 수 없습니다:**
 
