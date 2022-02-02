@@ -38,7 +38,7 @@ module.exports = {
             }
         ],
         [ 'sitemap', {
-            hostname: 'https://seungwoo321.github.io/'
+                hostname: 'https://seungwoo321.github.io/blog/'
             }
         ],
     ],
@@ -52,7 +52,6 @@ module.exports = {
         }
     },
     themeConfig: {
-        theme: '@vuepress/vue',
         nav: [
             {
                 text: 'TECH',
