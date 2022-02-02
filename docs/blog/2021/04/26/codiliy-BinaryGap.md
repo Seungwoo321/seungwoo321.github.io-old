@@ -2,7 +2,7 @@
 front_matter_title: Codility - Lesson 1 BinaryGab
 author: Seungwoo Lee
 date: 2021-04-26
-tags: ["Codility", "TIL", "Algorithm"]
+tags: ["Codility", "TIL"]
 description: BinaryGab 문제를 풀면서 공부한 내용을 정리하자.
 ---
 
