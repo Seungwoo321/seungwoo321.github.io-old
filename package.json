@@ -21,6 +21,7 @@
     "markdown-it-imsize": "^2.0.1",
     "vuepress": "^1.9.7",
     "vuepress-plugin-seo": "^0.1.4",
+    "vuepress-plugin-sitemap": "^2.3.1",
     "vuepress-plugin-table-of-contents": "^1.1.7"
   },
   "dependencies": {

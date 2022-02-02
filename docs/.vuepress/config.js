@@ -36,7 +36,11 @@ module.exports = {
             '@vuepress/html-redirect', {
                 countdown: 0
             }
-        ]
+        ],
+        [ 'sitemap', {
+            hostname: 'https://seungwoo321.github.io/'
+            }
+        ],
     ],
     markdown: {
         lineNumbers: true,
