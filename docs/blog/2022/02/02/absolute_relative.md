@@ -1,14 +1,14 @@
 ---
-front_matter_title: absolute와 relative의 차이
+front_matter_title: absolute와 relative의 차이에 대해서 설명하세요
 author: Seungwoo Lee
 date: 2022-02-02
-tags: ["JavaScript", "Frontend"]
-description: absolute와 relative의 차이에 대해 정리하자
+tags: ["JavaScript", "Frontend", "CSS"]
+description: CSS 포지션 absolute와 relative의 차이에 대해 정리하자
 ---
 
-# absolute와 relative의 차이
+# absolute와 relative의 차이에 대해서 설명하세요
 
-absolute와 relative의 차이에 대해 정리하자
+CSS 포지션 absolute와 relative의 차이에 대해 정리하자
 
 ## absolute vs relative
 
