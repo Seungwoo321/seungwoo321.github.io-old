@@ -37,7 +37,8 @@ module.exports = {
                 countdown: 0
             }
         ],
-        [ 'sitemap', {
+        [
+            'sitemap', {
                 hostname: 'https://seungwoo321.github.io/blog/'
             }
         ],
@@ -55,7 +56,7 @@ module.exports = {
         nav: [
             {
                 text: 'TECH',
-                link: '/'
+                link: '/blog'
             },
             {
                 text: 'PORTFOLIO',
