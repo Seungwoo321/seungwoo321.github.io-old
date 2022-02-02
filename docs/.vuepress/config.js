@@ -56,7 +56,7 @@ module.exports = {
         nav: [
             {
                 text: 'TECH',
-                link: '/blog'
+                link: '/'
             },
             {
                 text: 'PORTFOLIO',
