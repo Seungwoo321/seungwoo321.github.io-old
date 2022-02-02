@@ -39,7 +39,7 @@ module.exports = {
         ],
         [
             'sitemap', {
-                hostname: 'https://seungwoo321.github.io/blog/'
+                hostname: 'https://seungwoo321.github.io'
             }
         ],
     ],
