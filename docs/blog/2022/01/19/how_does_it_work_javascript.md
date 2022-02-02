@@ -49,3 +49,5 @@ description: 자바스크립트 엔진, 런타임, 호출 스택, 이벤트 루�
 - [https://joshua1988.github.io/web-development/translation/javascript/how-js-works-inside-engine](https://joshua1988.github.io/web-development/translation/javascript/how-js-works-inside-engine)
 - [https://velog.io/@dyllis/동시성이-무엇일까](https://velog.io/@dyllis/%EB%8F%99%EC%8B%9C%EC%84%B1%EC%9D%B4-%EB%AC%B4%EC%97%87%EC%9D%BC%EA%B9%8C)
 - [https://beomy.github.io/tech/javascript/javascript-runtime/](https://beomy.github.io/tech/javascript/javascript-runtime/)
+
+<Comment/>

@@ -115,3 +115,5 @@ console.log(carryOuter(10));
 
 - [https://medium.com/@yeon22/javascript-lexical-scope-static-scope-and-dynamic-scope-c4a9e941fab3](https://medium.com/@yeon22/javascript-lexical-scope-static-scope-and-dynamic-scope-c4a9e941fab3)
 - [https://poiemaweb.com/js-scope](https://poiemaweb.com/js-scope)
+
+<Comment/>

@@ -66,3 +66,5 @@ document.getElementById("parent-list").addEventListener("click", function(e) {
 ### event.stopPropagation()
 
 이벤트 전파를 막습니다.
+
+<Comment/>

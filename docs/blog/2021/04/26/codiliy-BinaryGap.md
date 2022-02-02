@@ -100,3 +100,5 @@ const binary = N.toString(2).split(/(?=[\s\S])/u);
 * [MDN 문서 - String의 내장 함수 split](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/String/split)
 * [MDN 문서 - 전역함수 parseInt](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/parseInt)
 * [스택 오버 플로우 How to get character array from a string?](https://stackoverflow.com/questions/4547609/how-to-get-character-array-from-a-string/34717402#34717402)
+
+<Comment/>

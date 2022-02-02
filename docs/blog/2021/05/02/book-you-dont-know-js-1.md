@@ -116,3 +116,5 @@ export default {
 ## 참조링크
 
 * [MDN에서 Closures 학습하기](https://developer.mozilla.org/ko/docs/Web/JavaScript/Closures)
+
+<Comment/>

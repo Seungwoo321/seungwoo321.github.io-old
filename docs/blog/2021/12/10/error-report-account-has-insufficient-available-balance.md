@@ -40,3 +40,5 @@ description: 토이 프로젝트로 진행 중인 트레이딩 봇의 로그에 
 
 * [거래소 마진 용어 설명](https://www.bitmex.com/app/marginTermReference)
 * [거래소 위험 한도](https://www.bitmex.com/app/riskLimits)
+
+<Comment/>

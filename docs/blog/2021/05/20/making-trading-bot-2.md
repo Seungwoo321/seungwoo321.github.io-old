@@ -124,3 +124,5 @@ END;
 
 * [이전 포스팅 - Amazon Athena SQL로 캔들 데이터 생성하기](/blog/2021/04/25/making-trading-bot-1.html)
 * [오픈소스 tvjsx/trading-vue-js](https://github.com/tvjsx/trading-vue-js)
+
+<Comment/>

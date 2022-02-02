@@ -50,3 +50,5 @@ description: 브라우저 렌더링 과정은 크게 다음 4단계로 설명 �
 - [https://speakerdeck.com/ryanseddon/how-the-browser-actually-renders-a-website](https://speakerdeck.com/ryanseddon/how-the-browser-actually-renders-a-website)
 - [브라우저는 어떻게 동작하는가?](https://d2.naver.com/helloworld/59361)
 - [최신 브라우저의 내부 살펴보기 3 - 렌더러 프로세스의 내부 동작](https://d2.naver.com/helloworld/5237120)
+
+<Comment/>

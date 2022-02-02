@@ -43,3 +43,5 @@ addEventListener() 에 따라 this값을 바인딩하는 핸들러 함수로 래
 ## 참조링크
 
 * <https://developer.mozilla.org/ko/docs/Web/API/EventTarget/addEventListener>
+
+<Comment/>

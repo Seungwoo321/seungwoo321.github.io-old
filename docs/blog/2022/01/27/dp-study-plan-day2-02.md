@@ -69,3 +69,5 @@ var minCostClimbingStairs = function (cost, memo = {}) {
     return Math.min(minCost(cost, 0, memo), minCost(cost, 1, memo));
 };
 ```
+
+<Comment/>

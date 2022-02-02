@@ -126,3 +126,5 @@ Vue CLI 3 로 생성한 프로젝트는 기본적으로 `src/` 의 alias 가 `@/
 * [VSCode의 jsconfig.json 알아보기](https://code.visualstudio.com/docs/languages/jsconfig)
 * [JavaScript Standard Style 가이드](https://standardjs.com/)
 * [Vue Cli3 default Alias @](https://github.com/vuejs/vue-cli/blob/ff57b8f55fa69873f643e418cfe6d4842d7c7674/packages/%40vue/cli-service/lib/config/base.js#L49-L50)
+
+<Comment/>
