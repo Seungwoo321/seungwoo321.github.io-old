@@ -55,18 +55,23 @@ Return the minimum cost to reach the top of the floor.
 
 문제의 난이도는 동일한 Easy인데 이전과 동일한 요령으로 쉽게 풀리지는 않았습니다. 그래서 더 좋은 연습이 된 것 같습니다.
 
-**풀이1 (메모이제이션):**
+**풀이1 (재귀):**
 
 ```js
-var minCostClimbingStairs = function (cost, memo = {}) {
+var minCostClimbingStairs = function (cost, i = 0) {
+    if (!(i in cost)) return 0;
+    return Math.min(cost[i] + minCostClimbingStairs(cost, i + 1), (cost[i + 1] || 0) + minCostClimbingStairs(cost, i + 2));
+};
+```
 
-    const minCost = function (cost, i, memo) {
-        if (i >= cost.length) return 0;
-        if (i in memo) return memo[i];
-        memo[i] = cost[i] + Math.min(minCost(cost, i + 1, memo), minCost(cost, i + 2, memo));
-        return memo[i];
-    }
-    return Math.min(minCost(cost, 0, memo), minCost(cost, 1, memo));
+**풀이2 (메모이제이션):**
+
+```js
+var minCostClimbingStairs = function (cost, i = 0 , memo = {}) {
+    if (!(i in cost)) return 0;
+    if (i in memo) return memo[i];
+    memo[i] = Math.min(cost[i] + minCostClimbingStairs(cost, i + 1, memo), (cost[i + 1] || 0) + minCostClimbingStairs(cost, i + 2, memo));
+    return memo[i];
 };
 ```
 
