@@ -1,12 +1,12 @@
 ---
-front_matter_title: leetcodes Dynamic Programming - N-th Tribonacci Number / javascript
+front_matter_title: leetcodes Dynamic Programming I - N-th Tribonacci Number / javascript
 author: Seungwoo Lee
 date: 2022-01-22
 tags: ["TIL", "leetcode"]
 description: leetcode의 StudyPlan Dynamic Programming I - Day 1의 두 번째 문제 N-th Tribonacci Number에 메모이제이션 기법(Memoization)을 연습합니다.
 ---
 
-# leetcodes - Dynamic Programming - N-th Tribonacci Number
+# leetcodes Dynamic Programming I - N-th Tribonacci Number / javascript
 
 leetcode의 StudyPlan Dynamic Programming I - Day 1의 두 번째 문제 N-th Tribonacci Number에 메모이제이션 기법(Memoization)을 연습합니다.
 

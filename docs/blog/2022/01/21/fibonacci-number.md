@@ -1,12 +1,12 @@
 ---
-front_matter_title: leetcodes Dynamic Programming - Fibonacci Number / javascript
+front_matter_title: leetcodes Dynamic Programming I - Fibonacci Number / javascript
 author: Seungwoo Lee
 date: 2022-01-21
 tags: ["TIL", "leetcode"]
 description: leetcode의 StudyPlan Dynamic Programming I - Day 1의 문제 첫 번째 문제 Fibonacci Number에 메모이제이션 기법(Memoization)을 연습했습니다.
 ---
 
-# leetcodes Dynamic Programming - Fibonacci Number / javascript
+# leetcodes Dynamic Programming I - Fibonacci Number / javascript
 
 leetcode의 StudyPlan Dynamic Programming I - Day 1의 문제 첫 번째 문제 Fibonacci Number에 메모이제이션 기법(Memoization)을 연습했습니다.
 

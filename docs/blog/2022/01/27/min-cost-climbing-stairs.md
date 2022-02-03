@@ -1,12 +1,12 @@
 ---
-front_matter_title: leetcodes Dynamic Programming - Min Cost Climbing Stairs / javascript
+front_matter_title: leetcodes Dynamic Programming I - Min Cost Climbing Stairs / javascript
 author: Seungwoo Lee
 date: 2022-01-27
 tags: ["TIL", "leetcode"]
 description: leetcode의 StudyPlan Dynamic Programming I - Day 2의 두 번째 문제 Min Cost Climbing Stairs에 메모이제이션 기법(Memoization)을 연습합니다.
 ---
 
-# leetcodes - Dynamic Programming - Min Cost Climbing Stairs
+# leetcodes Dynamic Programming I - Min Cost Climbing Stairs / javascript
 
 leetcode의 StudyPlan Dynamic Programming I - Day 2의 두 번째 문제 Min Cost Climbing Stairs에 메모이제이션 기법(Memoization)을 연습합니다.
 

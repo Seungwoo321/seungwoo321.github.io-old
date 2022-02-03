@@ -1,12 +1,12 @@
 ---
-front_matter_title: leetcodes Dynamic Programming - House Robber / javascript
+front_matter_title: leetcodes Dynamic Programming I - House Robber / javascript
 author: Seungwoo Lee
 date: 2022-02-01
 tags: ["TIL", "leetcode"]
 description: leetcode의 StudyPlan Dynamic Programming I - Day 3의 첫 번째 문제 House Robber에 메모이제이션 기법(Memoization)을 연습합니다.
 ---
 
-# leetcodes - Dynamic Programming - House Robber
+# leetcodes Dynamic Programming I - House Robber / javascript
 
 leetcode의 StudyPlan Dynamic Programming I - Day 3의 첫 번째 문제 House Robber에 메모이제이션 기법(Memoization)을 연습합니다.
 
