@@ -64,6 +64,9 @@ var minCostClimbingStairs = function (cost, i = 0) {
 };
 ```
 
+* 259 / 283 test cases passed.
+* Status: Time Limit Exceeded
+
 **풀이2 (메모이제이션):**
 
 ```js
@@ -74,5 +77,8 @@ var minCostClimbingStairs = function (cost, i = 0 , memo = {}) {
     return memo[i];
 };
 ```
+
+* 283 / 283 test cases passed.
+* Status: Accepted
 
 <Comment/>
