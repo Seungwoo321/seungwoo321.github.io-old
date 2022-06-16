@@ -377,12 +377,12 @@ echo ""
 
 사실 mariadb의 이미지 설명 처럼 influxdb의 이미지에도 /docker-entrypoint-initdb.d에 대한 설명 있었지만 이걸 놓쳤던겁니다.
 
-그래서 처음에는 공식 이미지의 내용을 직접 수정해 볼 생각으로 influxdb 공식 도커 이미지를 살펴봤습니다. 여기서 `ENTRYPOINT`에 지정된 entrypoint.sh 스크립트가 눈에 띄었고 이걸 열어보니 사용자가 설정한 환경 변수에 따라서 `1.x 버전에서 업그레이드`하거나 `2.x 버전에서 기본 사용자 생성 및 버킷 생성`을 한 다음 /docker-entrypoint-initdb.d에 위치한 `사용자 정의 스크립트를 실행`하는 내용이 포함돼 있는 걸 보고 확실하게 이해할 수 있었습니다.
+그래서 처음에는 공식 이미지의 내용을 직접 수정해 볼 생각으로 influxdb 공식 도커 이미지를 살펴봤습니다. 여기서 `ENTRYPOINT`에 지정된 entrypoint.sh 스크립트가 눈에 띄었고 이걸 열어보니 사용자가 설정한 환경 변수에 따라서 `1.x 버전에서 업그레이드`하거나 `2.x 버전에서 기본 사용자 및 버킷 생성`을 한 다음 /docker-entrypoint-initdb.d에 위치한 `사용자 정의 스크립트를 실행`하는 내용이 포함돼 있는 걸 보고 확실하게 이해할 수 있었습니다.
 
 entrypoint.sh에서의 각 기능과 관련된 코드는 다음과 같습니다.
 
 - `1.x 버전에서 업그레이드` - [upgrade_influxd: L280, L147~187](https://github.com/influxdata/influxdata-docker/blob/e7469c2eae8f6a3dd50a2fbdea64aacde372cc74/influxdb/2.2/entrypoint.sh#L280)
-- `2.x 버전에서 기본 사용자 생성 및 버킷 생성` - [setup_influxd: L318, L212~L229](https://github.com/influxdata/influxdata-docker/blob/e7469c2eae8f6a3dd50a2fbdea64aacde372cc74/influxdb/2.2/entrypoint.sh#L318)
+- `2.x 버전에서 기본 사용자 및 버킷 생성` - [setup_influxd: L318, L212~L229](https://github.com/influxdata/influxdata-docker/blob/e7469c2eae8f6a3dd50a2fbdea64aacde372cc74/influxdb/2.2/entrypoint.sh#L318)
 - `사용자 정의 스크립트를 실행` - [run_user_scripts: L322, L253~L258](https://github.com/influxdata/influxdata-docker/blob/e7469c2eae8f6a3dd50a2fbdea64aacde372cc74/influxdb/2.2/entrypoint.sh#L322)
 
 ### 도커파일 빌드하기
