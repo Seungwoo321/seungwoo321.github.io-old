@@ -22,7 +22,7 @@ v2.0을 리팩토링 한 트레이딩 봇(Trading bot) 애플리케이션 캣츠
 - MariaDB 10.5
 - Node.js 16.15.0
 
-이 환경을 구성한 다음에는 실행되는 봇 애플리케이션에서 거래소부터 받은 시장 데이터를 인플럭스디비(InfluxDB)에 저장하기 위해 쓰기 권한이 있는 토큰과 저장소가 되는 버킷 이름이 필요합니다. 또한 포지션 상태 값을 관리하고 거래내역에 대한 데이터 저장은 마리아 디비(MariaDB)를 쓰기 때문에 마리아 디비의 접속 정보도 필요합니다. 또 거래소에 자동주문을 생성하기 위해 거래소부터 발급받은 ApiKey, SecretKey 값과 종목에 대한 정보 들도 환경 변수로 참조하고 있어야 합니다.
+이 환경을 구성한 다음에는 실행되는 봇 애플리케이션에서 거래소부터 받은 시장 데이터를 인플럭스디비(InfluxDB)에 저장하기 위해 쓰기 권한이 있는 토큰과 저장소가 되는 버킷 이름이 필요합니다. 포지션 상태 값을 관리하고 거래내역에 대한 데이터 저장은 마리아 디비(MariaDB)를 쓰기 때문에 마리아 디비의 접속 정보도 필요합니다. 또 거래소에 자동주문을 생성하기 위해 거래소부터 발급받은 ApiKey, SecretKey 값과 종목에 대한 정보 들도 환경 변수로 참조하고 있어야 합니다.
 
 ## 하나의 컨테이너에 구성
 
@@ -76,7 +76,7 @@ mysql_secure_installation
 - Version: InfluxDB V2.2.0
 - Platform: Ubunut & Debina
 
-여기서 언급하는 우분투 이미지로 시작한 컨테이너의 경우 아무것도 설치된 것이 없기 때문에 안내해 주는 데로 명령어를 실행해도 `command not found` 오류가 발생합니다. 당황하지 말고 실행에 필요한 명령어와 관련된 패키지들을 설치 후 진행해 주면 잘됩니다.
+이 글에서 처럼 우분투 이미지로 시작한 컨테이너의 경우 아무것도 설치된 것이 없기 때문에 안내해 주는 데로 명령어를 실행해도 `command not found` 오류가 발생합니다. 당황하지 말고 실행에 필요한 명령어와 관련된 패키지들을 설치 후 진행해 주면 잘됩니다.
 
 command not found 오류 해결을 위한 패키지 설치
 
@@ -125,7 +125,7 @@ node -v
 
 ### 컨테이너 커밋
 
-트레이딩 봇 애플리케이션 캣츠를 실행하는데 필요한 패키지 설치가 완료되었습니다. 여기까지 작업한 내용을 저장하기 위해서 컨테이너를 종료하고 커밋 명령어로 새 이미지를 생성합니다.
+트레이딩 봇 애플리케이션을 실행하는데 필요한 패키지 설치가 완료되었습니다. 여기까지 작업한 내용을 저장하기 위해서 컨테이너를 종료하고 커밋 명령어로 새 이미지를 생성했습니다.
 
 ```bash
 # inside container
@@ -146,7 +146,7 @@ cats         latest    16617d12090f   About a minute ago   930MB
 
 ## 서비스 설정 및 테스트
 
-새로 만든 이미지로 포트 바인딩 옵션을 주고 dev라는 이름으로 컨테이너를 실행했습니다. 각 서비스의 설정을 위해서 서비스를 시작합니다.
+새로 만든 이미지로 포트 바인딩 옵션을 주고 dev라는 이름으로 컨테이너를 실행했습니다. 각 서비스 별로 설정을 위해서 서비스를 실행합니다.
 
 ```bash
 # outside container
@@ -159,7 +159,7 @@ service influxdb start
 
 ### InfluxDB 2.2 초기 설정
 
-<http://localhost:8086>로 접속하거나 CLI 명령어를 사용해서 초기 설정을 진행할 수 있습니다. 트레이딩 봇 애플리케이션에는 환경 변수로 인플럭스 디비에 데이터를 쓰기 위한 토큰(token) 설정이 필요한데 웹 브라우저에서 초기 설정을 하게 되면 생성된 계정으로 로그인해서 랜덤으로 생성되는 토큰 값을 얻어야 합니다.
+<http://localhost:8086>로 접속하거나 CLI 명령어를 사용해서 초기 설정을 진행할 수 있습니다. 트레이딩 봇 애플리케이션에는 환경 변수로 인플럭스 디비에 데이터를 쓰기 위한 토큰(token) 설정이 필요한데 웹 브라우저에서 초기 설정을 하게 되면 랜덤으로 토큰 값이 생성되고 로그인 후에 웹 페이지에서 확인할 수 있습니다.
 
 <div style="display:flex;">
   <img style="width:49.5%;margin-bottom:0.25rem;margin-right:0.25rem;" src="./img/influxdb-01.png">
@@ -170,7 +170,7 @@ service influxdb start
   <img style="width:49.5%;margin-bottom:0.25rem;" src="./img/influxdb-04.png">
 </div>
 
-다음과 같이 CLI를 사용하면 강제로 토큰 값을 지정할 수 있어서 자동화에 유용할 수 있습니다.
+다음과 같이 CLI를 사용하면 강제로 토큰 값을 지정할 수 있어서 자동화에는 이 방법이 유용합니다.
 
 ```bash
 # inside container
@@ -279,15 +279,15 @@ flush privileges;
 
 ## Dockerfile로 구성
 
-하나의 컨테이너로 구성한 커스텀 이미지를 사용해서 개발환경을 쉽게 테스트 할 수있었습니다. 하지만 공식문서를 읽어보면 하나의 컨테이너에서는 하나의 프로세스만 관리하는 멀티 컨테이너 전략을 권장합니다. 그래서 도커를 다시 구성해 보려 합니다.
+하나의 컨테이너로 구성한 커스텀 이미지를 사용해서 개발환경을 쉽게 테스트 할 수있었습니다. 하지만 공식문서를 읽어보면 하나의 컨테이너에서는 하나의 프로세스만 관리하는 멀티 컨테이너 전략을 권장합니다. 그래서 Dockerfile로 각각 다시 구성해 보기로 했습니다.
 
 ### 도커파일 작성
 
-[Docker Hub](https://hub.docker.com/search?q=)에서 influxdb와 mariadb가 이미 설치되어 있는 공식 이미지를 각각 찾을 수 있습니다. 이 이미지를 기반으로 초기 데이터베이스와 계정 설정을 한 도커 파일을 작성했습니다.
+[Docker Hub](https://hub.docker.com/search?q=)에서 influxdb와 mariadb가 이미 설치되어 있는 공식 이미지를 찾을 수 있습니다. 이 이미지를 기반으로 데이터베이스와 계정등을 생성하는 도커 파일을 작성했습니다.
 
 #### Dockerfile.mariadb
 
-먼저 mariadb를 공식 이미지의 설명과 도커 가이드 문서를 보고 작성 했습니다.
+먼저 mariadb를 가이드 문서를 보고 작성 했습니다.
 
 ```Dockerfile
 FROM mariadb:10.5
@@ -302,9 +302,7 @@ COPY entry-mariadb.sql /docker-entrypoint-initdb.d/
 EXPOSE 3306
 ```
 
-entry-mariadb.sql은 [컨테이너에 개발 환경 구성하기의 mariadb 10.5 데이터베이스 생성](#mariadb-10-5-데이터베이스-생성)의 SQL을 담고 있습니다.
-
-공식 이미지 설명을 보면 /docker-entrypoint-initdb.d에 위치한 파일의 확장자가 일치하는 경우 알파벳 순서대로 실행된다고 합니다.
+entry-mariadb.sql은 [컨테이너에 개발 환경 구성하기의 mariadb 10.5 데이터베이스 생성](#mariadb-10-5-데이터베이스-생성)의 SQL을 담고 있습니다. 공식 이미지에서 설명하는 확장자와 일치하도록 해서`/docker-entrypoint-initdb.d`에 파일을 위치시키면 알파벳 순서대로 실행된다고 합니다.
 
 ::: details
 
@@ -337,7 +335,7 @@ COPY entry-influxdb.sh /docker-entrypoint-initdb.d/
 EXPOSE 8086
 ```
 
-entry-influxdb.sh는 지원하는 거래소 이름별로 버킷을 생성하는 CLI 명령어들을 실행하는 스크립트입니다. 설치 과정 중 생성하는 최초 버킷 외에 거래소별로 캔들 데이터를 구분하여 저장하기 위한 용도로 캔들 데이터를 수집하기 전에는 미리 생성되어야 합니다.
+entry-influxdb.sh는 지원하는 거래소 이름별로 버킷을 생성하는 CLI 명령어들을 실행하는 스크립트입니다. 설치 과정 중 생성하는 최초 버킷 외에 거래소별로 캔들 데이터를 구분하여 저장하기 위한 용도로 캔들 데이터를 수집하기 전에 미리 생성되어야 합니다.
 
 ::: details
 
@@ -371,13 +369,13 @@ echo ""
 
 :::
 
-이러한 추가 CLI 실행에는 인증 토큰이 필요하기 때문에 기본 계정 및 버킷 설정이 완료된 후에 influxdb 서비스가 정상 실행 중인 상태에서만 동작을 합니다.
+이러한 추가 CLI 실행에는 최초 기본 계정 및 버킷 설정이 완료된 이후 시점에 생성되는 인증 토큰이 필요하고 influxdb 서비스도 실행 중이어야 합니다.
 
-[InfluxDB 2.2 초기 설정](#influxdb-2-2-초기-설정)에서 수동으로 진행했던것과는 달리 Dockerfile을 작성해서 자동화하려는 경우에는 init-influxdb.sh를 적절한 시점에 어떻게 실행해야될지 정말 많은 고민을 했습니다.
+[InfluxDB 2.2 초기 설정](#influxdb-2-2-초기-설정)에서 수동으로 진행했던것과는 달리 Dockerfile을 빌드 시 entry-influxdb.sh를 실행하려면 어떻게 해야 되는지 정말 많은 고민을 했습니다.
 
-사실 mariadb의 이미지 설명 처럼 influxdb의 이미지에도 /docker-entrypoint-initdb.d에 대한 설명 있었지만 이걸 놓쳤던겁니다.
+사실 mariadb처럼 influxdb도 /docker-entrypoint-initdb.d에 대한 설명이 있었지만 이 부분을 놓쳤습니다.
 
-그래서 처음에는 공식 이미지의 내용을 직접 수정해 볼 생각으로 influxdb 공식 도커 이미지를 살펴봤습니다. 여기서 `ENTRYPOINT`에 지정된 entrypoint.sh 스크립트가 눈에 띄었고 이걸 열어보니 사용자가 설정한 환경 변수에 따라서 `1.x 버전에서 업그레이드`하거나 `2.x 버전에서 기본 사용자 및 버킷 생성`을 한 다음 /docker-entrypoint-initdb.d에 위치한 `사용자 정의 스크립트를 실행`하는 내용이 포함돼 있는 걸 보고 확실하게 이해할 수 있었습니다.
+그래서 influxdb 이미지 빌드 과정의 어느 부분에 스크립트를 끼워 넣어야 하는지 파악하기 위해  깃허브에서 influxdb의 공식 Dockerfile을 살펴봤습니다. `ENTRYPOINT`에 entrypoint.sh 스크립트가 지정되어 있었고 이걸 열어보니 사용자가 설정한 환경 변수에 따라서 `1.x 버전에서 업그레이드`하거나 `2.x 버전에서 기본 사용자 및 버킷 생성`을 한 다음 /docker-entrypoint-initdb.d에 위치한 `사용자 정의 스크립트를 실행`하는 내용이 포함돼 있는 걸 보고 확실하게 이해할 수 있었습니다.
 
 entrypoint.sh에서의 각 기능과 관련된 코드는 다음과 같습니다.
 
@@ -387,7 +385,7 @@ entrypoint.sh에서의 각 기능과 관련된 코드는 다음과 같습니다.
 
 ### 도커파일 빌드하기
 
-Dockerfile과 각 엔트리 스크립트/쿼리문 파일이 위치한 dockerfiles 디렉터리에서 다음처럼 빌드 명령어를 실행하면 이미지가 생성됩니다. 태그를 지정하지 않으면 `<none>`으로 생성돼서 -t [이름:버전]으로 태그를 지정하고 작성한 파일명이 Dockerfile이 아닌 경우에는 -f [도커파일]으로 파일명을 지정하면 됩니다. 컨텍스트는 로컬이라면 현재 위치를 지정합니다.
+Dockerfile과 각 엔트리 스크립트/쿼리문 파일이 위치한 dockerfiles 디렉터리에서 다음처럼 빌드 명령어를 실행하면 새로운 도커 이미지가 생성됩니다. 태그를 지정하지 않으면 `<none>`으로 생성돼서 -t [이름:버전]으로 태그를 지정하고 작성한 도커 파일명이 Dockerfile이 아닌 경우에는 -f [도커파일]으로 파일명을 지정하면 됩니다. 컨텍스트는 로컬이라서 현재 위치를 지정했습니다.
 
 ```bash
 # current location is dockerfiles/ .
@@ -399,7 +397,7 @@ docker build -t seungwoo321/cats_mariadb:1.0 -f Dockerfile.mariadb .
 
 #### 컨텍스트를 깃허브 링크로 지정시 이슈 정리
 
-<https://docs.docker.com/engine/reference/commandline/build/> 문서를 보면 컨텍스트를 깃허브 디렉터리를 지정하는 방법도 있습니다. 테스트를 해보려면 먼저 Dockerfile의 엔트리 스크립트/쿼리 파일을 깃허브에서 가져오도록 수정하고 이 문서를 참고해서 빌드 명령어를 작성 후 실행해 보았습니다. 그러면 이 문서의 "Note"에서 언급하는 것처럼 BuildKit의 이슈로 오류가 발생합니다. DOCKER_BUILDKIT을 사용하지 않는다는 의미로 0으로 값을 지정하면 오류는 해결이 됩니다. 하지만 빌드 할 때 시간이 오래 걸려서 좋은 방법은 아닌 것 같습니다.
+<https://docs.docker.com/engine/reference/commandline/build/> 문서를 보면 컨텍스트를 깃허브로 지정하는 방법이 있습니다. 테스트를 하기위해 먼저 Dockerfile의 엔트리 스크립트/쿼리 파일을 깃허브에서 가져오도록 수정했고 이 문서를 참고해서 빌드 명령어를 작성 후 실행해 보았습니다. 그러면 이 문서의 "Note"에서 언급하는 것처럼 BuildKit의 이슈로 오류가 발생합니다. DOCKER_BUILDKIT을 사용하지 않는다는 의미로 0으로 값을 지정하면 오류는 해결이 되지만 빌드 할 때 시간이 오래 걸려서 좋은 방법은 아닌 것 같습니다.
 
 - Dockerfile 수정
 
@@ -425,11 +423,11 @@ docker build -t seungwoo321/cats_influxdb:1.0 -f dockerfiles/Dockerfile.influxdb
 
 ```
 
-- 결과
+- 결과는 오류 출력
 
 > failed to solve with frontend dockerfile.v0: failed to read dockerfile: failed to load cache key: subdir not supported yet
 
-- 해결
+- 해결한 빌드 명령어
 
 ```bash
 DOCKER_BUILDKIT=0 docker build -t seungwoo321/cats_mariadb:1.0 -f dockerfiles/Dockerfile.mariadb github.com/Seungwoo321/cats.git#master:dockerfiles
@@ -445,7 +443,7 @@ DOCKER_BUILDKIT=0 docker build -t seungwoo321/cats_influxdb:1.0 -f dockerfiles/D
 ```bash
 docker image push seungwoo321/cats_mariadb:1.0
 
-docker image push seungwoo321/cats_influxdb:1.0s
+docker image push seungwoo321/cats_influxdb:1.0
 
 ```
 
@@ -465,8 +463,11 @@ docker run -d -p 8086:8086 -it --rm seungwoo321/cats_influxdb:1.0
 
 ## Docker Compose로 구성
 
-Docker Compose는 YAML 파일을 사용해서 다중 컨테이너 애플리케이션을 정의하고 실행할 수 있는 도구입니다.
-운영환경을 위해서 위에서 작성한 Dockerfile의 내용을 기반으로 다음과 같이 작성하고 실행합니다.
+Docker Compose는 YAML 파일을 사용해서 다중 컨테이너 애플리케이션을 정의하고 실행할 수 있는 도구입니다. 
+
+배포 환경은 컨테이너별로 Dockerfile을 여러 개 관리하기보다는 하나의 파일로 작성해서 관리하고 한 번에 애플리케이션에 필요한 모든 서비스를 실행할 수 있도록 해서 조금 더 쉽게 트레이딩 봇 애플리케이션을 사용할 수 있도록 하고 싶습니다.
+
+이전에 작성한 Dockerfile의 내용을 기반으로 다음과 같이 작성했습니다. 
 
 ### YAML파일 작성
 
@@ -537,4 +538,4 @@ docker compose up
 
 ## Conclusion
 
-트레이딩 봇을 깃허브에 오픈소스로 배포를 하니 봇을 구동하기 위해 처음 진행되어야 하는 데이터베이스의 셋업 과정이 너무 번거롭게 불편하게 느껴졌습니다. 이렇게 여러 개의 애플리케이션이나 서비스를 구동해야 하는 환경이라면 도커를 도입해 보는 게 아주 큰 도움이 될 수 있습니다.
+트레이딩 봇을 깃허브에 오픈소스로 배포를 하니 봇을 구동하기 위해 처음 진행되어야 하는 데이터베이스의 셋업 과정이 너무 번거롭게 불편하게 느껴졌습니다. 이렇게 여러 개의 애플리케이션이나 서비스를 구동해야 하는 환경이라면 도커를 도입해 보는 게 아주 큰 도움이 될 것 같습니다.
